@@ -1,0 +1,9 @@
+{
+    "defaults": {
+        "verbose": 0,
+        "depth": 15
+    },
+    "paths": {
+        "analyzeHeadless":"/ghidra/support/analyzeHeadless"
+    }
+}

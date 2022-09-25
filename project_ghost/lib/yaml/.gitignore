@@ -1,0 +1,10 @@
+# build outputs
+_yaml.c
+**/*.so
+**/*.dylib
+**/*.pyd
+# cached Python binaries
+*.py[cdo]
+_pycache_/*
+*.pyc
+*$py.class

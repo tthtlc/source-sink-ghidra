@@ -1,0 +1,5263 @@
+
+#########################################################################
+
+Architecture Detected: ARM-32
+	Return Register: r0
+	Parameter Registers: [r0, r1, r2, r3]
+
+#########################################################################
+
+Vulnerable Parameter of sink (system) @ 001052c0 : char *
+		REGISTER Parameter: (register, 0x20, 4)
+	
+	============================
+	Sink (system) @ 0x00082a40 --> STARTING PATH
+		===============
+		Assembly Instruction #5, Block #1: beq 0x00082a24
+		Assembly Instruction #4, Block #1: cmp r3,#0x0
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, CY, r3, 0x1f]
+		Assembly Instruction #3, Block #1: sub r7,r10,#0x10
+		-----------
+			Result Objects: [tmpNG, tmpZR, tmpCY, tmpOV, shift_carry, r7]
+			Input Objects: [0x10, 0x0, CY, r10, 0x1f]
+		Assembly Instruction #2, Block #1: ldr r3,[r10,#-0x10]
+		-----------
+			Result Objects: [r3]
+			Input Objects: [r10, 0xfffffff0]
+		Assembly Instruction #1, Block #1: add r10,r10,#0x10
+		-----------
+			Result Objects: [tmpNG, tmpZR, tmpCY, tmpOV, shift_carry, r10]
+			Input Objects: [0x10, 0x0, CY, r10, 0x1f]
+
+--> NEW PATH CREATED
+		===============
+		Assembly Instruction #2, Block #2: bne 0x00082a3c
+		-----------
+			Result Objects: []
+			Input Objects: [ZR]
+		Assembly Instruction #1, Block #2: subs r11,r0,#0x0
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry, r11]
+			Input Objects: [0x0, r0, CY, 0x1f]
+		===============
+		Assembly Instruction #4, Block #3: bl 0x000163a8
+		Assembly Instruction #3, Block #3: ldr r0,[r10,#-0xc]
+		-----------
+			Result Objects: [r0]
+			Input Objects: [r10, 0xfffffff4]
+		Assembly Instruction #2, Block #3: cpy r1,r5
+		-----------
+			Result Objects: [r1]
+			Input Objects: [r5]
+		Assembly Instruction #1, Block #3: mov r2,#0x2
+		-----------
+			Result Objects: [tmpNG, tmpZR, tmpCY, tmpOV, shift_carry, r2]
+			Input Objects: [0x0, 0x2, CY, OV, 0x1f]
+		===============
+		Assembly Instruction #3, Block #4: bne 0x00082a3c
+		-----------
+			Result Objects: []
+			Input Objects: [ZR]
+		Assembly Instruction #2, Block #4: cmpne r6,r3
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, ZR, CY, r6, r3]
+		Assembly Instruction #1, Block #4: cmn r3,#0x1
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, 0x1, CY, r3, 0x1f]
+		===============
+		Assembly Instruction #5, Block #5: beq 0x00082a24
+		-----------
+			Result Objects: []
+			Input Objects: [ZR]
+		Assembly Instruction #4, Block #5: cmp r3,#0x0
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, CY, r3, 0x1f]
+		Assembly Instruction #3, Block #5: sub r7,r10,#0x10
+		-----------
+			Result Objects: [tmpNG, tmpZR, tmpCY, tmpOV, shift_carry, r7]
+			Input Objects: [0x10, 0x0, CY, r10, 0x1f]
+		Assembly Instruction #2, Block #5: ldr r3,[r10,#-0x10]
+		-----------
+			Result Objects: [r3]
+			Input Objects: [r10, 0xfffffff0]
+		Assembly Instruction #1, Block #5: add r10,r10,#0x10
+		-----------
+			Result Objects: [tmpNG, tmpZR, tmpCY, tmpOV, shift_carry, r10]
+			Input Objects: [0x10, 0x0, CY, r10, 0x1f]
+
+--> NEW PATH CREATED
+		===============
+		Assembly Instruction #2, Block #6: bne 0x00082a3c
+		-----------
+			Result Objects: []
+			Input Objects: [ZR]
+		Assembly Instruction #1, Block #6: subs r11,r0,#0x0
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry, r11]
+			Input Objects: [0x0, r0, CY, 0x1f]
+		===============
+		Assembly Instruction #4, Block #7: bl 0x000163a8
+		Assembly Instruction #3, Block #7: ldr r0,[r10,#-0xc]
+		-----------
+			Result Objects: [r0]
+			Input Objects: [r10, 0xfffffff4]
+		Assembly Instruction #2, Block #7: cpy r1,r5
+		-----------
+			Result Objects: [r1]
+			Input Objects: [r5]
+		Assembly Instruction #1, Block #7: mov r2,#0x2
+		-----------
+			Result Objects: [tmpNG, tmpZR, tmpCY, tmpOV, shift_carry, r2]
+			Input Objects: [0x0, 0x2, CY, OV, 0x1f]
+		===============
+		Assembly Instruction #3, Block #8: bne 0x00082a3c
+		-----------
+			Result Objects: []
+			Input Objects: [ZR]
+		Assembly Instruction #2, Block #8: cmpne r6,r3
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, ZR, CY, r6, r3]
+		Assembly Instruction #1, Block #8: cmn r3,#0x1
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, 0x1, CY, r3, 0x1f]
+		===============
+		Assembly Instruction #5, Block #9: beq 0x00082a24
+		-----------
+			Result Objects: []
+			Input Objects: [ZR]
+		Assembly Instruction #4, Block #9: cmp r3,#0x0
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, CY, r3, 0x1f]
+		Assembly Instruction #3, Block #9: sub r7,r10,#0x10
+		-----------
+			Result Objects: [tmpNG, tmpZR, tmpCY, tmpOV, shift_carry, r7]
+			Input Objects: [0x10, 0x0, CY, r10, 0x1f]
+		Assembly Instruction #2, Block #9: ldr r3,[r10,#-0x10]
+		-----------
+			Result Objects: [r3]
+			Input Objects: [r10, 0xfffffff0]
+		Assembly Instruction #1, Block #9: add r10,r10,#0x10
+		-----------
+			Result Objects: [tmpNG, tmpZR, tmpCY, tmpOV, shift_carry, r10]
+			Input Objects: [0x10, 0x0, CY, r10, 0x1f]
+
+--> NEW PATH CREATED
+		===============
+		Assembly Instruction #2, Block #10: bne 0x00082a3c
+		-----------
+			Result Objects: []
+			Input Objects: [ZR]
+		Assembly Instruction #1, Block #10: subs r11,r0,#0x0
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry, r11]
+			Input Objects: [0x0, r0, CY, 0x1f]
+		===============
+		Assembly Instruction #4, Block #11: bl 0x000163a8
+		Assembly Instruction #3, Block #11: ldr r0,[r10,#-0xc]
+		-----------
+			Result Objects: [r0]
+			Input Objects: [r10, 0xfffffff4]
+		Assembly Instruction #2, Block #11: cpy r1,r5
+		-----------
+			Result Objects: [r1]
+			Input Objects: [r5]
+		Assembly Instruction #1, Block #11: mov r2,#0x2
+		-----------
+			Result Objects: [tmpNG, tmpZR, tmpCY, tmpOV, shift_carry, r2]
+			Input Objects: [0x0, 0x2, CY, OV, 0x1f]
+		===============
+		Assembly Instruction #3, Block #12: bne 0x00082a3c
+		-----------
+			Result Objects: []
+			Input Objects: [ZR]
+		Assembly Instruction #2, Block #12: cmpne r6,r3
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, ZR, CY, r6, r3]
+		Assembly Instruction #1, Block #12: cmn r3,#0x1
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, 0x1, CY, r3, 0x1f]
+		===============
+		Assembly Instruction #5, Block #13: beq 0x00082a24
+		-----------
+			Result Objects: []
+			Input Objects: [ZR]
+		Assembly Instruction #4, Block #13: cmp r3,#0x0
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, CY, r3, 0x1f]
+		Assembly Instruction #3, Block #13: sub r7,r10,#0x10
+		-----------
+			Result Objects: [tmpNG, tmpZR, tmpCY, tmpOV, shift_carry, r7]
+			Input Objects: [0x10, 0x0, CY, r10, 0x1f]
+		Assembly Instruction #2, Block #13: ldr r3,[r10,#-0x10]
+		-----------
+			Result Objects: [r3]
+			Input Objects: [r10, 0xfffffff0]
+		Assembly Instruction #1, Block #13: add r10,r10,#0x10
+		-----------
+			Result Objects: [tmpNG, tmpZR, tmpCY, tmpOV, shift_carry, r10]
+			Input Objects: [0x10, 0x0, CY, r10, 0x1f]
+
+--> NEW PATH CREATED
+		===============
+		Assembly Instruction #2, Block #14: bne 0x00082a3c
+		-----------
+			Result Objects: []
+			Input Objects: [ZR]
+		Assembly Instruction #1, Block #14: subs r11,r0,#0x0
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry, r11]
+			Input Objects: [0x0, r0, CY, 0x1f]
+		===============
+		Assembly Instruction #4, Block #15: bl 0x000163a8
+		===============
+		Assembly Instruction #3, Block #16: bne 0x00082a3c
+
+--> Continuing back to previous path...
+
+--> NEW PATH CREATED
+		===============
+		Assembly Instruction #3, Block #14: cpy r6,r0
+		-----------
+			Result Objects: [r6]
+			Input Objects: [r0]
+		Assembly Instruction #2, Block #14: ldr r10,[r4,r3]
+		-----------
+			Result Objects: [r10]
+			Input Objects: [r4, r3]
+		Assembly Instruction #1, Block #14: ldr r3,[0x82c7c]
+		-----------
+			Result Objects: [r3]
+			Input Objects: [00082c7c]
+		===============
+		Assembly Instruction #1, Block #15: bl 0x00016eb8
+		===============
+		Assembly Instruction #2, Block #16: bgt 0x00082a2c
+
+--> Continuing back to previous path...
+		===============
+		Assembly Instruction #3, Block #14: bne 0x00082a3c
+		-----------
+			Result Objects: []
+			Input Objects: [ZR]
+		Assembly Instruction #2, Block #14: cmpne r6,r3
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, ZR, CY, r6, r3]
+		Assembly Instruction #1, Block #14: cmn r3,#0x1
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, 0x1, CY, r3, 0x1f]
+		===============
+		Assembly Instruction #5, Block #15: beq 0x00082a24
+
+--> NEW PATH CREATED
+		===============
+		Assembly Instruction #2, Block #16: bne 0x00082a3c
+
+--> Continuing back to previous path...
+
+--> NEW PATH CREATED
+		===============
+		Assembly Instruction #3, Block #16: cpy r6,r0
+
+--> Continuing back to previous path...
+		===============
+		Assembly Instruction #3, Block #16: bne 0x00082a3c
+
+--> Continuing back to previous path...
+
+--> NEW PATH CREATED
+		===============
+		Assembly Instruction #3, Block #10: cpy r6,r0
+		-----------
+			Result Objects: [r6]
+			Input Objects: [r0]
+		Assembly Instruction #2, Block #10: ldr r10,[r4,r3]
+		-----------
+			Result Objects: [r10]
+			Input Objects: [r4, r3]
+		Assembly Instruction #1, Block #10: ldr r3,[0x82c7c]
+		-----------
+			Result Objects: [r3]
+			Input Objects: [00082c7c]
+		===============
+		Assembly Instruction #1, Block #11: bl 0x00016eb8
+		===============
+		Assembly Instruction #2, Block #12: bgt 0x00082a2c
+		-----------
+			Result Objects: []
+			Input Objects: [NG, ZR, OV]
+		Assembly Instruction #1, Block #12: cmp r0,#0x0
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, r0, CY, 0x1f]
+		===============
+		Assembly Instruction #6, Block #13: bl 0x00016738
+		Assembly Instruction #5, Block #13: cpy r0,r5
+		-----------
+			Result Objects: [r0]
+			Input Objects: [r5]
+		Assembly Instruction #4, Block #13: cpy r3,r0
+		-----------
+			Result Objects: [r3]
+			Input Objects: [r0]
+		Assembly Instruction #3, Block #13: add r2,pc,r2
+		-----------
+			Result Objects: [tmpNG, tmpZR, tmpCY, tmpOV, shift_carry, r2]
+			Input Objects: [0x0, CY, 0x82a0c, 0x8, r2]
+		Assembly Instruction #2, Block #13: mov r1,#0x7
+		-----------
+			Result Objects: [r1, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, CY, OV, 0x7, 0x1f]
+		Assembly Instruction #1, Block #13: ldr r2,[0x82c78]
+		-----------
+			Result Objects: [r2]
+			Input Objects: [00082c78]
+		===============
+		Assembly Instruction #4, Block #14: bl 0x0007a854
+		Assembly Instruction #3, Block #14: add r0,pc,r0
+		-----------
+			Result Objects: [r0, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [r0, 0x0, CY, 0x829fc, 0x8]
+		Assembly Instruction #2, Block #14: add r5,sp,#0x14
+		-----------
+			Result Objects: [r5, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, CY, 0x14, sp, 0x1f]
+		Assembly Instruction #1, Block #14: ldr r0,[0x82c74]
+		-----------
+			Result Objects: [r0]
+			Input Objects: [00082c74]
+		===============
+		Assembly Instruction #2, Block #15: beq 0x00082a24
+		===============
+		Assembly Instruction #3, Block #16: bl 0x00016204
+
+--> Continuing back to previous path...
+		===============
+		Assembly Instruction #3, Block #10: bne 0x00082a3c
+		-----------
+			Result Objects: []
+			Input Objects: [ZR]
+		Assembly Instruction #2, Block #10: cmpne r6,r3
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, ZR, CY, r6, r3]
+		Assembly Instruction #1, Block #10: cmn r3,#0x1
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, 0x1, CY, r3, 0x1f]
+		===============
+		Assembly Instruction #5, Block #11: beq 0x00082a24
+		-----------
+			Result Objects: []
+			Input Objects: [ZR]
+		Assembly Instruction #4, Block #11: cmp r3,#0x0
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, CY, r3, 0x1f]
+		Assembly Instruction #3, Block #11: sub r7,r10,#0x10
+		-----------
+			Result Objects: [tmpNG, tmpZR, tmpCY, tmpOV, shift_carry, r7]
+			Input Objects: [0x10, 0x0, CY, r10, 0x1f]
+		Assembly Instruction #2, Block #11: ldr r3,[r10,#-0x10]
+		-----------
+			Result Objects: [r3]
+			Input Objects: [r10, 0xfffffff0]
+		Assembly Instruction #1, Block #11: add r10,r10,#0x10
+		-----------
+			Result Objects: [tmpNG, tmpZR, tmpCY, tmpOV, shift_carry, r10]
+			Input Objects: [0x10, 0x0, CY, r10, 0x1f]
+
+--> NEW PATH CREATED
+		===============
+		Assembly Instruction #2, Block #12: bne 0x00082a3c
+		-----------
+			Result Objects: []
+			Input Objects: [ZR]
+		Assembly Instruction #1, Block #12: subs r11,r0,#0x0
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry, r11]
+			Input Objects: [0x0, r0, CY, 0x1f]
+		===============
+		Assembly Instruction #4, Block #13: bl 0x000163a8
+		Assembly Instruction #3, Block #13: ldr r0,[r10,#-0xc]
+		-----------
+			Result Objects: [r0]
+			Input Objects: [r10, 0xfffffff4]
+		Assembly Instruction #2, Block #13: cpy r1,r5
+		-----------
+			Result Objects: [r1]
+			Input Objects: [r5]
+		Assembly Instruction #1, Block #13: mov r2,#0x2
+		-----------
+			Result Objects: [tmpNG, tmpZR, tmpCY, tmpOV, shift_carry, r2]
+			Input Objects: [0x0, 0x2, CY, OV, 0x1f]
+		===============
+		Assembly Instruction #3, Block #14: bne 0x00082a3c
+		-----------
+			Result Objects: []
+			Input Objects: [ZR]
+		Assembly Instruction #2, Block #14: cmpne r6,r3
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, ZR, CY, r6, r3]
+		Assembly Instruction #1, Block #14: cmn r3,#0x1
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, 0x1, CY, r3, 0x1f]
+		===============
+		Assembly Instruction #5, Block #15: beq 0x00082a24
+
+--> NEW PATH CREATED
+		===============
+		Assembly Instruction #2, Block #16: bne 0x00082a3c
+
+--> Continuing back to previous path...
+
+--> NEW PATH CREATED
+		===============
+		Assembly Instruction #3, Block #16: cpy r6,r0
+
+--> Continuing back to previous path...
+		===============
+		Assembly Instruction #3, Block #16: bne 0x00082a3c
+
+--> Continuing back to previous path...
+
+--> NEW PATH CREATED
+		===============
+		Assembly Instruction #3, Block #12: cpy r6,r0
+		-----------
+			Result Objects: [r6]
+			Input Objects: [r0]
+		Assembly Instruction #2, Block #12: ldr r10,[r4,r3]
+		-----------
+			Result Objects: [r10]
+			Input Objects: [r4, r3]
+		Assembly Instruction #1, Block #12: ldr r3,[0x82c7c]
+		-----------
+			Result Objects: [r3]
+			Input Objects: [00082c7c]
+		===============
+		Assembly Instruction #1, Block #13: bl 0x00016eb8
+		===============
+		Assembly Instruction #2, Block #14: bgt 0x00082a2c
+		-----------
+			Result Objects: []
+			Input Objects: [NG, ZR, OV]
+		Assembly Instruction #1, Block #14: cmp r0,#0x0
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, r0, CY, 0x1f]
+		===============
+		Assembly Instruction #6, Block #15: bl 0x00016738
+		===============
+		Assembly Instruction #4, Block #16: bl 0x0007a854
+
+--> Continuing back to previous path...
+		===============
+		Assembly Instruction #3, Block #12: bne 0x00082a3c
+		-----------
+			Result Objects: []
+			Input Objects: [ZR]
+		Assembly Instruction #2, Block #12: cmpne r6,r3
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, ZR, CY, r6, r3]
+		Assembly Instruction #1, Block #12: cmn r3,#0x1
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, 0x1, CY, r3, 0x1f]
+		===============
+		Assembly Instruction #5, Block #13: beq 0x00082a24
+		-----------
+			Result Objects: []
+			Input Objects: [ZR]
+		Assembly Instruction #4, Block #13: cmp r3,#0x0
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, CY, r3, 0x1f]
+		Assembly Instruction #3, Block #13: sub r7,r10,#0x10
+		-----------
+			Result Objects: [tmpNG, tmpZR, tmpCY, tmpOV, shift_carry, r7]
+			Input Objects: [0x10, 0x0, CY, r10, 0x1f]
+		Assembly Instruction #2, Block #13: ldr r3,[r10,#-0x10]
+		-----------
+			Result Objects: [r3]
+			Input Objects: [r10, 0xfffffff0]
+		Assembly Instruction #1, Block #13: add r10,r10,#0x10
+		-----------
+			Result Objects: [tmpNG, tmpZR, tmpCY, tmpOV, shift_carry, r10]
+			Input Objects: [0x10, 0x0, CY, r10, 0x1f]
+
+--> NEW PATH CREATED
+		===============
+		Assembly Instruction #2, Block #14: bne 0x00082a3c
+		-----------
+			Result Objects: []
+			Input Objects: [ZR]
+		Assembly Instruction #1, Block #14: subs r11,r0,#0x0
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry, r11]
+			Input Objects: [0x0, r0, CY, 0x1f]
+		===============
+		Assembly Instruction #4, Block #15: bl 0x000163a8
+		===============
+		Assembly Instruction #3, Block #16: bne 0x00082a3c
+
+--> Continuing back to previous path...
+
+--> NEW PATH CREATED
+		===============
+		Assembly Instruction #3, Block #14: cpy r6,r0
+		-----------
+			Result Objects: [r6]
+			Input Objects: [r0]
+		Assembly Instruction #2, Block #14: ldr r10,[r4,r3]
+		-----------
+			Result Objects: [r10]
+			Input Objects: [r4, r3]
+		Assembly Instruction #1, Block #14: ldr r3,[0x82c7c]
+		-----------
+			Result Objects: [r3]
+			Input Objects: [00082c7c]
+		===============
+		Assembly Instruction #1, Block #15: bl 0x00016eb8
+		===============
+		Assembly Instruction #2, Block #16: bgt 0x00082a2c
+
+--> Continuing back to previous path...
+		===============
+		Assembly Instruction #3, Block #14: bne 0x00082a3c
+		-----------
+			Result Objects: []
+			Input Objects: [ZR]
+		Assembly Instruction #2, Block #14: cmpne r6,r3
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, ZR, CY, r6, r3]
+		Assembly Instruction #1, Block #14: cmn r3,#0x1
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, 0x1, CY, r3, 0x1f]
+		===============
+		Assembly Instruction #5, Block #15: beq 0x00082a24
+
+--> NEW PATH CREATED
+		===============
+		Assembly Instruction #2, Block #16: bne 0x00082a3c
+
+--> Continuing back to previous path...
+
+--> NEW PATH CREATED
+		===============
+		Assembly Instruction #3, Block #16: cpy r6,r0
+
+--> Continuing back to previous path...
+		===============
+		Assembly Instruction #3, Block #16: bne 0x00082a3c
+
+--> Continuing back to previous path...
+
+--> NEW PATH CREATED
+		===============
+		Assembly Instruction #3, Block #6: cpy r6,r0
+		-----------
+			Result Objects: [r6]
+			Input Objects: [r0]
+		Assembly Instruction #2, Block #6: ldr r10,[r4,r3]
+		-----------
+			Result Objects: [r10]
+			Input Objects: [r4, r3]
+		Assembly Instruction #1, Block #6: ldr r3,[0x82c7c]
+		-----------
+			Result Objects: [r3]
+			Input Objects: [00082c7c]
+		===============
+		Assembly Instruction #1, Block #7: bl 0x00016eb8
+		===============
+		Assembly Instruction #2, Block #8: bgt 0x00082a2c
+		-----------
+			Result Objects: []
+			Input Objects: [NG, ZR, OV]
+		Assembly Instruction #1, Block #8: cmp r0,#0x0
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, r0, CY, 0x1f]
+		===============
+		Assembly Instruction #6, Block #9: bl 0x00016738
+		Assembly Instruction #5, Block #9: cpy r0,r5
+		-----------
+			Result Objects: [r0]
+			Input Objects: [r5]
+		Assembly Instruction #4, Block #9: cpy r3,r0
+		-----------
+			Result Objects: [r3]
+			Input Objects: [r0]
+		Assembly Instruction #3, Block #9: add r2,pc,r2
+		-----------
+			Result Objects: [tmpNG, tmpZR, tmpCY, tmpOV, shift_carry, r2]
+			Input Objects: [0x0, CY, 0x82a0c, 0x8, r2]
+		Assembly Instruction #2, Block #9: mov r1,#0x7
+		-----------
+			Result Objects: [r1, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, CY, OV, 0x7, 0x1f]
+		Assembly Instruction #1, Block #9: ldr r2,[0x82c78]
+		-----------
+			Result Objects: [r2]
+			Input Objects: [00082c78]
+		===============
+		Assembly Instruction #4, Block #10: bl 0x0007a854
+		Assembly Instruction #3, Block #10: add r0,pc,r0
+		-----------
+			Result Objects: [r0, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [r0, 0x0, CY, 0x829fc, 0x8]
+		Assembly Instruction #2, Block #10: add r5,sp,#0x14
+		-----------
+			Result Objects: [r5, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, CY, 0x14, sp, 0x1f]
+		Assembly Instruction #1, Block #10: ldr r0,[0x82c74]
+		-----------
+			Result Objects: [r0]
+			Input Objects: [00082c74]
+		===============
+		Assembly Instruction #2, Block #11: beq 0x00082a24
+		-----------
+			Result Objects: []
+			Input Objects: [ZR]
+		Assembly Instruction #1, Block #11: cmp r0,#0x0
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, r0, CY, 0x1f]
+		===============
+		Assembly Instruction #3, Block #12: bl 0x00016204
+		Assembly Instruction #2, Block #12: add r1,pc,r1
+		-----------
+			Result Objects: [r1, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, CY, r1, 0x8, 0x829e4]
+		Assembly Instruction #1, Block #12: ldr r1,[0x82c70]
+		-----------
+			Result Objects: [r1]
+			Input Objects: [00082c70]
+		===============
+		Assembly Instruction #3, Block #13: bl 0x0007a854
+		Assembly Instruction #2, Block #13: add r0,pc,r0
+		-----------
+			Result Objects: [r0, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x829d8, r0, 0x0, CY, 0x8]
+		Assembly Instruction #1, Block #13: ldr r0,[0x82c6c]
+		-----------
+			Result Objects: [r0]
+			Input Objects: [00082c6c]
+		===============
+		Assembly Instruction #2, Block #14: beq 0x00082a24
+		-----------
+			Result Objects: []
+			Input Objects: [ZR]
+		Assembly Instruction #1, Block #14: cmp r0,#0x0
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, r0, CY, 0x1f]
+		===============
+		Assembly Instruction #2, Block #15: bl 0x0001a2d8
+		===============
+		Assembly Instruction #12, Block #16: beq 0x00082a24
+
+--> Continuing back to previous path...
+		===============
+		Assembly Instruction #3, Block #6: bne 0x00082a3c
+		-----------
+			Result Objects: []
+			Input Objects: [ZR]
+		Assembly Instruction #2, Block #6: cmpne r6,r3
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, ZR, CY, r6, r3]
+		Assembly Instruction #1, Block #6: cmn r3,#0x1
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, 0x1, CY, r3, 0x1f]
+		===============
+		Assembly Instruction #5, Block #7: beq 0x00082a24
+		-----------
+			Result Objects: []
+			Input Objects: [ZR]
+		Assembly Instruction #4, Block #7: cmp r3,#0x0
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, CY, r3, 0x1f]
+		Assembly Instruction #3, Block #7: sub r7,r10,#0x10
+		-----------
+			Result Objects: [tmpNG, tmpZR, tmpCY, tmpOV, shift_carry, r7]
+			Input Objects: [0x10, 0x0, CY, r10, 0x1f]
+		Assembly Instruction #2, Block #7: ldr r3,[r10,#-0x10]
+		-----------
+			Result Objects: [r3]
+			Input Objects: [r10, 0xfffffff0]
+		Assembly Instruction #1, Block #7: add r10,r10,#0x10
+		-----------
+			Result Objects: [tmpNG, tmpZR, tmpCY, tmpOV, shift_carry, r10]
+			Input Objects: [0x10, 0x0, CY, r10, 0x1f]
+
+--> NEW PATH CREATED
+		===============
+		Assembly Instruction #2, Block #8: bne 0x00082a3c
+		-----------
+			Result Objects: []
+			Input Objects: [ZR]
+		Assembly Instruction #1, Block #8: subs r11,r0,#0x0
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry, r11]
+			Input Objects: [0x0, r0, CY, 0x1f]
+		===============
+		Assembly Instruction #4, Block #9: bl 0x000163a8
+		Assembly Instruction #3, Block #9: ldr r0,[r10,#-0xc]
+		-----------
+			Result Objects: [r0]
+			Input Objects: [r10, 0xfffffff4]
+		Assembly Instruction #2, Block #9: cpy r1,r5
+		-----------
+			Result Objects: [r1]
+			Input Objects: [r5]
+		Assembly Instruction #1, Block #9: mov r2,#0x2
+		-----------
+			Result Objects: [tmpNG, tmpZR, tmpCY, tmpOV, shift_carry, r2]
+			Input Objects: [0x0, 0x2, CY, OV, 0x1f]
+		===============
+		Assembly Instruction #3, Block #10: bne 0x00082a3c
+		-----------
+			Result Objects: []
+			Input Objects: [ZR]
+		Assembly Instruction #2, Block #10: cmpne r6,r3
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, ZR, CY, r6, r3]
+		Assembly Instruction #1, Block #10: cmn r3,#0x1
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, 0x1, CY, r3, 0x1f]
+		===============
+		Assembly Instruction #5, Block #11: beq 0x00082a24
+		-----------
+			Result Objects: []
+			Input Objects: [ZR]
+		Assembly Instruction #4, Block #11: cmp r3,#0x0
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, CY, r3, 0x1f]
+		Assembly Instruction #3, Block #11: sub r7,r10,#0x10
+		-----------
+			Result Objects: [tmpNG, tmpZR, tmpCY, tmpOV, shift_carry, r7]
+			Input Objects: [0x10, 0x0, CY, r10, 0x1f]
+		Assembly Instruction #2, Block #11: ldr r3,[r10,#-0x10]
+		-----------
+			Result Objects: [r3]
+			Input Objects: [r10, 0xfffffff0]
+		Assembly Instruction #1, Block #11: add r10,r10,#0x10
+		-----------
+			Result Objects: [tmpNG, tmpZR, tmpCY, tmpOV, shift_carry, r10]
+			Input Objects: [0x10, 0x0, CY, r10, 0x1f]
+
+--> NEW PATH CREATED
+		===============
+		Assembly Instruction #2, Block #12: bne 0x00082a3c
+		-----------
+			Result Objects: []
+			Input Objects: [ZR]
+		Assembly Instruction #1, Block #12: subs r11,r0,#0x0
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry, r11]
+			Input Objects: [0x0, r0, CY, 0x1f]
+		===============
+		Assembly Instruction #4, Block #13: bl 0x000163a8
+		Assembly Instruction #3, Block #13: ldr r0,[r10,#-0xc]
+		-----------
+			Result Objects: [r0]
+			Input Objects: [r10, 0xfffffff4]
+		Assembly Instruction #2, Block #13: cpy r1,r5
+		-----------
+			Result Objects: [r1]
+			Input Objects: [r5]
+		Assembly Instruction #1, Block #13: mov r2,#0x2
+		-----------
+			Result Objects: [tmpNG, tmpZR, tmpCY, tmpOV, shift_carry, r2]
+			Input Objects: [0x0, 0x2, CY, OV, 0x1f]
+		===============
+		Assembly Instruction #3, Block #14: bne 0x00082a3c
+		-----------
+			Result Objects: []
+			Input Objects: [ZR]
+		Assembly Instruction #2, Block #14: cmpne r6,r3
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, ZR, CY, r6, r3]
+		Assembly Instruction #1, Block #14: cmn r3,#0x1
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, 0x1, CY, r3, 0x1f]
+		===============
+		Assembly Instruction #5, Block #15: beq 0x00082a24
+
+--> NEW PATH CREATED
+		===============
+		Assembly Instruction #2, Block #16: bne 0x00082a3c
+
+--> Continuing back to previous path...
+
+--> NEW PATH CREATED
+		===============
+		Assembly Instruction #3, Block #16: cpy r6,r0
+
+--> Continuing back to previous path...
+		===============
+		Assembly Instruction #3, Block #16: bne 0x00082a3c
+
+--> Continuing back to previous path...
+
+--> NEW PATH CREATED
+		===============
+		Assembly Instruction #3, Block #12: cpy r6,r0
+		-----------
+			Result Objects: [r6]
+			Input Objects: [r0]
+		Assembly Instruction #2, Block #12: ldr r10,[r4,r3]
+		-----------
+			Result Objects: [r10]
+			Input Objects: [r4, r3]
+		Assembly Instruction #1, Block #12: ldr r3,[0x82c7c]
+		-----------
+			Result Objects: [r3]
+			Input Objects: [00082c7c]
+		===============
+		Assembly Instruction #1, Block #13: bl 0x00016eb8
+		===============
+		Assembly Instruction #2, Block #14: bgt 0x00082a2c
+		-----------
+			Result Objects: []
+			Input Objects: [NG, ZR, OV]
+		Assembly Instruction #1, Block #14: cmp r0,#0x0
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, r0, CY, 0x1f]
+		===============
+		Assembly Instruction #6, Block #15: bl 0x00016738
+		===============
+		Assembly Instruction #4, Block #16: bl 0x0007a854
+
+--> Continuing back to previous path...
+		===============
+		Assembly Instruction #3, Block #12: bne 0x00082a3c
+		-----------
+			Result Objects: []
+			Input Objects: [ZR]
+		Assembly Instruction #2, Block #12: cmpne r6,r3
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, ZR, CY, r6, r3]
+		Assembly Instruction #1, Block #12: cmn r3,#0x1
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, 0x1, CY, r3, 0x1f]
+		===============
+		Assembly Instruction #5, Block #13: beq 0x00082a24
+		-----------
+			Result Objects: []
+			Input Objects: [ZR]
+		Assembly Instruction #4, Block #13: cmp r3,#0x0
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, CY, r3, 0x1f]
+		Assembly Instruction #3, Block #13: sub r7,r10,#0x10
+		-----------
+			Result Objects: [tmpNG, tmpZR, tmpCY, tmpOV, shift_carry, r7]
+			Input Objects: [0x10, 0x0, CY, r10, 0x1f]
+		Assembly Instruction #2, Block #13: ldr r3,[r10,#-0x10]
+		-----------
+			Result Objects: [r3]
+			Input Objects: [r10, 0xfffffff0]
+		Assembly Instruction #1, Block #13: add r10,r10,#0x10
+		-----------
+			Result Objects: [tmpNG, tmpZR, tmpCY, tmpOV, shift_carry, r10]
+			Input Objects: [0x10, 0x0, CY, r10, 0x1f]
+
+--> NEW PATH CREATED
+		===============
+		Assembly Instruction #2, Block #14: bne 0x00082a3c
+		-----------
+			Result Objects: []
+			Input Objects: [ZR]
+		Assembly Instruction #1, Block #14: subs r11,r0,#0x0
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry, r11]
+			Input Objects: [0x0, r0, CY, 0x1f]
+		===============
+		Assembly Instruction #4, Block #15: bl 0x000163a8
+		===============
+		Assembly Instruction #3, Block #16: bne 0x00082a3c
+
+--> Continuing back to previous path...
+
+--> NEW PATH CREATED
+		===============
+		Assembly Instruction #3, Block #14: cpy r6,r0
+		-----------
+			Result Objects: [r6]
+			Input Objects: [r0]
+		Assembly Instruction #2, Block #14: ldr r10,[r4,r3]
+		-----------
+			Result Objects: [r10]
+			Input Objects: [r4, r3]
+		Assembly Instruction #1, Block #14: ldr r3,[0x82c7c]
+		-----------
+			Result Objects: [r3]
+			Input Objects: [00082c7c]
+		===============
+		Assembly Instruction #1, Block #15: bl 0x00016eb8
+		===============
+		Assembly Instruction #2, Block #16: bgt 0x00082a2c
+
+--> Continuing back to previous path...
+		===============
+		Assembly Instruction #3, Block #14: bne 0x00082a3c
+		-----------
+			Result Objects: []
+			Input Objects: [ZR]
+		Assembly Instruction #2, Block #14: cmpne r6,r3
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, ZR, CY, r6, r3]
+		Assembly Instruction #1, Block #14: cmn r3,#0x1
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, 0x1, CY, r3, 0x1f]
+		===============
+		Assembly Instruction #5, Block #15: beq 0x00082a24
+
+--> NEW PATH CREATED
+		===============
+		Assembly Instruction #2, Block #16: bne 0x00082a3c
+
+--> Continuing back to previous path...
+
+--> NEW PATH CREATED
+		===============
+		Assembly Instruction #3, Block #16: cpy r6,r0
+
+--> Continuing back to previous path...
+		===============
+		Assembly Instruction #3, Block #16: bne 0x00082a3c
+
+--> Continuing back to previous path...
+
+--> NEW PATH CREATED
+		===============
+		Assembly Instruction #3, Block #8: cpy r6,r0
+		-----------
+			Result Objects: [r6]
+			Input Objects: [r0]
+		Assembly Instruction #2, Block #8: ldr r10,[r4,r3]
+		-----------
+			Result Objects: [r10]
+			Input Objects: [r4, r3]
+		Assembly Instruction #1, Block #8: ldr r3,[0x82c7c]
+		-----------
+			Result Objects: [r3]
+			Input Objects: [00082c7c]
+		===============
+		Assembly Instruction #1, Block #9: bl 0x00016eb8
+		===============
+		Assembly Instruction #2, Block #10: bgt 0x00082a2c
+		-----------
+			Result Objects: []
+			Input Objects: [NG, ZR, OV]
+		Assembly Instruction #1, Block #10: cmp r0,#0x0
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, r0, CY, 0x1f]
+		===============
+		Assembly Instruction #6, Block #11: bl 0x00016738
+		Assembly Instruction #5, Block #11: cpy r0,r5
+		-----------
+			Result Objects: [r0]
+			Input Objects: [r5]
+		Assembly Instruction #4, Block #11: cpy r3,r0
+		-----------
+			Result Objects: [r3]
+			Input Objects: [r0]
+		Assembly Instruction #3, Block #11: add r2,pc,r2
+		-----------
+			Result Objects: [tmpNG, tmpZR, tmpCY, tmpOV, shift_carry, r2]
+			Input Objects: [0x0, CY, 0x82a0c, 0x8, r2]
+		Assembly Instruction #2, Block #11: mov r1,#0x7
+		-----------
+			Result Objects: [r1, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, CY, OV, 0x7, 0x1f]
+		Assembly Instruction #1, Block #11: ldr r2,[0x82c78]
+		-----------
+			Result Objects: [r2]
+			Input Objects: [00082c78]
+		===============
+		Assembly Instruction #4, Block #12: bl 0x0007a854
+		Assembly Instruction #3, Block #12: add r0,pc,r0
+		-----------
+			Result Objects: [r0, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [r0, 0x0, CY, 0x829fc, 0x8]
+		Assembly Instruction #2, Block #12: add r5,sp,#0x14
+		-----------
+			Result Objects: [r5, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, CY, 0x14, sp, 0x1f]
+		Assembly Instruction #1, Block #12: ldr r0,[0x82c74]
+		-----------
+			Result Objects: [r0]
+			Input Objects: [00082c74]
+		===============
+		Assembly Instruction #2, Block #13: beq 0x00082a24
+		-----------
+			Result Objects: []
+			Input Objects: [ZR]
+		Assembly Instruction #1, Block #13: cmp r0,#0x0
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, r0, CY, 0x1f]
+		===============
+		Assembly Instruction #3, Block #14: bl 0x00016204
+		Assembly Instruction #2, Block #14: add r1,pc,r1
+		-----------
+			Result Objects: [r1, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, CY, r1, 0x8, 0x829e4]
+		Assembly Instruction #1, Block #14: ldr r1,[0x82c70]
+		-----------
+			Result Objects: [r1]
+			Input Objects: [00082c70]
+		===============
+		Assembly Instruction #3, Block #15: bl 0x0007a854
+		===============
+		Assembly Instruction #2, Block #16: beq 0x00082a24
+
+--> Continuing back to previous path...
+		===============
+		Assembly Instruction #3, Block #8: bne 0x00082a3c
+		-----------
+			Result Objects: []
+			Input Objects: [ZR]
+		Assembly Instruction #2, Block #8: cmpne r6,r3
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, ZR, CY, r6, r3]
+		Assembly Instruction #1, Block #8: cmn r3,#0x1
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, 0x1, CY, r3, 0x1f]
+		===============
+		Assembly Instruction #5, Block #9: beq 0x00082a24
+		-----------
+			Result Objects: []
+			Input Objects: [ZR]
+		Assembly Instruction #4, Block #9: cmp r3,#0x0
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, CY, r3, 0x1f]
+		Assembly Instruction #3, Block #9: sub r7,r10,#0x10
+		-----------
+			Result Objects: [tmpNG, tmpZR, tmpCY, tmpOV, shift_carry, r7]
+			Input Objects: [0x10, 0x0, CY, r10, 0x1f]
+		Assembly Instruction #2, Block #9: ldr r3,[r10,#-0x10]
+		-----------
+			Result Objects: [r3]
+			Input Objects: [r10, 0xfffffff0]
+		Assembly Instruction #1, Block #9: add r10,r10,#0x10
+		-----------
+			Result Objects: [tmpNG, tmpZR, tmpCY, tmpOV, shift_carry, r10]
+			Input Objects: [0x10, 0x0, CY, r10, 0x1f]
+
+--> NEW PATH CREATED
+		===============
+		Assembly Instruction #2, Block #10: bne 0x00082a3c
+		-----------
+			Result Objects: []
+			Input Objects: [ZR]
+		Assembly Instruction #1, Block #10: subs r11,r0,#0x0
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry, r11]
+			Input Objects: [0x0, r0, CY, 0x1f]
+		===============
+		Assembly Instruction #4, Block #11: bl 0x000163a8
+		Assembly Instruction #3, Block #11: ldr r0,[r10,#-0xc]
+		-----------
+			Result Objects: [r0]
+			Input Objects: [r10, 0xfffffff4]
+		Assembly Instruction #2, Block #11: cpy r1,r5
+		-----------
+			Result Objects: [r1]
+			Input Objects: [r5]
+		Assembly Instruction #1, Block #11: mov r2,#0x2
+		-----------
+			Result Objects: [tmpNG, tmpZR, tmpCY, tmpOV, shift_carry, r2]
+			Input Objects: [0x0, 0x2, CY, OV, 0x1f]
+		===============
+		Assembly Instruction #3, Block #12: bne 0x00082a3c
+		-----------
+			Result Objects: []
+			Input Objects: [ZR]
+		Assembly Instruction #2, Block #12: cmpne r6,r3
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, ZR, CY, r6, r3]
+		Assembly Instruction #1, Block #12: cmn r3,#0x1
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, 0x1, CY, r3, 0x1f]
+		===============
+		Assembly Instruction #5, Block #13: beq 0x00082a24
+		-----------
+			Result Objects: []
+			Input Objects: [ZR]
+		Assembly Instruction #4, Block #13: cmp r3,#0x0
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, CY, r3, 0x1f]
+		Assembly Instruction #3, Block #13: sub r7,r10,#0x10
+		-----------
+			Result Objects: [tmpNG, tmpZR, tmpCY, tmpOV, shift_carry, r7]
+			Input Objects: [0x10, 0x0, CY, r10, 0x1f]
+		Assembly Instruction #2, Block #13: ldr r3,[r10,#-0x10]
+		-----------
+			Result Objects: [r3]
+			Input Objects: [r10, 0xfffffff0]
+		Assembly Instruction #1, Block #13: add r10,r10,#0x10
+		-----------
+			Result Objects: [tmpNG, tmpZR, tmpCY, tmpOV, shift_carry, r10]
+			Input Objects: [0x10, 0x0, CY, r10, 0x1f]
+
+--> NEW PATH CREATED
+		===============
+		Assembly Instruction #2, Block #14: bne 0x00082a3c
+		-----------
+			Result Objects: []
+			Input Objects: [ZR]
+		Assembly Instruction #1, Block #14: subs r11,r0,#0x0
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry, r11]
+			Input Objects: [0x0, r0, CY, 0x1f]
+		===============
+		Assembly Instruction #4, Block #15: bl 0x000163a8
+		===============
+		Assembly Instruction #3, Block #16: bne 0x00082a3c
+
+--> Continuing back to previous path...
+
+--> NEW PATH CREATED
+		===============
+		Assembly Instruction #3, Block #14: cpy r6,r0
+		-----------
+			Result Objects: [r6]
+			Input Objects: [r0]
+		Assembly Instruction #2, Block #14: ldr r10,[r4,r3]
+		-----------
+			Result Objects: [r10]
+			Input Objects: [r4, r3]
+		Assembly Instruction #1, Block #14: ldr r3,[0x82c7c]
+		-----------
+			Result Objects: [r3]
+			Input Objects: [00082c7c]
+		===============
+		Assembly Instruction #1, Block #15: bl 0x00016eb8
+		===============
+		Assembly Instruction #2, Block #16: bgt 0x00082a2c
+
+--> Continuing back to previous path...
+		===============
+		Assembly Instruction #3, Block #14: bne 0x00082a3c
+		-----------
+			Result Objects: []
+			Input Objects: [ZR]
+		Assembly Instruction #2, Block #14: cmpne r6,r3
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, ZR, CY, r6, r3]
+		Assembly Instruction #1, Block #14: cmn r3,#0x1
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, 0x1, CY, r3, 0x1f]
+		===============
+		Assembly Instruction #5, Block #15: beq 0x00082a24
+
+--> NEW PATH CREATED
+		===============
+		Assembly Instruction #2, Block #16: bne 0x00082a3c
+
+--> Continuing back to previous path...
+
+--> NEW PATH CREATED
+		===============
+		Assembly Instruction #3, Block #16: cpy r6,r0
+
+--> Continuing back to previous path...
+		===============
+		Assembly Instruction #3, Block #16: bne 0x00082a3c
+
+--> Continuing back to previous path...
+
+--> NEW PATH CREATED
+		===============
+		Assembly Instruction #3, Block #10: cpy r6,r0
+		-----------
+			Result Objects: [r6]
+			Input Objects: [r0]
+		Assembly Instruction #2, Block #10: ldr r10,[r4,r3]
+		-----------
+			Result Objects: [r10]
+			Input Objects: [r4, r3]
+		Assembly Instruction #1, Block #10: ldr r3,[0x82c7c]
+		-----------
+			Result Objects: [r3]
+			Input Objects: [00082c7c]
+		===============
+		Assembly Instruction #1, Block #11: bl 0x00016eb8
+		===============
+		Assembly Instruction #2, Block #12: bgt 0x00082a2c
+		-----------
+			Result Objects: []
+			Input Objects: [NG, ZR, OV]
+		Assembly Instruction #1, Block #12: cmp r0,#0x0
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, r0, CY, 0x1f]
+		===============
+		Assembly Instruction #6, Block #13: bl 0x00016738
+		Assembly Instruction #5, Block #13: cpy r0,r5
+		-----------
+			Result Objects: [r0]
+			Input Objects: [r5]
+		Assembly Instruction #4, Block #13: cpy r3,r0
+		-----------
+			Result Objects: [r3]
+			Input Objects: [r0]
+		Assembly Instruction #3, Block #13: add r2,pc,r2
+		-----------
+			Result Objects: [tmpNG, tmpZR, tmpCY, tmpOV, shift_carry, r2]
+			Input Objects: [0x0, CY, 0x82a0c, 0x8, r2]
+		Assembly Instruction #2, Block #13: mov r1,#0x7
+		-----------
+			Result Objects: [r1, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, CY, OV, 0x7, 0x1f]
+		Assembly Instruction #1, Block #13: ldr r2,[0x82c78]
+		-----------
+			Result Objects: [r2]
+			Input Objects: [00082c78]
+		===============
+		Assembly Instruction #4, Block #14: bl 0x0007a854
+		Assembly Instruction #3, Block #14: add r0,pc,r0
+		-----------
+			Result Objects: [r0, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [r0, 0x0, CY, 0x829fc, 0x8]
+		Assembly Instruction #2, Block #14: add r5,sp,#0x14
+		-----------
+			Result Objects: [r5, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, CY, 0x14, sp, 0x1f]
+		Assembly Instruction #1, Block #14: ldr r0,[0x82c74]
+		-----------
+			Result Objects: [r0]
+			Input Objects: [00082c74]
+		===============
+		Assembly Instruction #2, Block #15: beq 0x00082a24
+		===============
+		Assembly Instruction #3, Block #16: bl 0x00016204
+
+--> Continuing back to previous path...
+		===============
+		Assembly Instruction #3, Block #10: bne 0x00082a3c
+		-----------
+			Result Objects: []
+			Input Objects: [ZR]
+		Assembly Instruction #2, Block #10: cmpne r6,r3
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, ZR, CY, r6, r3]
+		Assembly Instruction #1, Block #10: cmn r3,#0x1
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, 0x1, CY, r3, 0x1f]
+		===============
+		Assembly Instruction #5, Block #11: beq 0x00082a24
+		-----------
+			Result Objects: []
+			Input Objects: [ZR]
+		Assembly Instruction #4, Block #11: cmp r3,#0x0
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, CY, r3, 0x1f]
+		Assembly Instruction #3, Block #11: sub r7,r10,#0x10
+		-----------
+			Result Objects: [tmpNG, tmpZR, tmpCY, tmpOV, shift_carry, r7]
+			Input Objects: [0x10, 0x0, CY, r10, 0x1f]
+		Assembly Instruction #2, Block #11: ldr r3,[r10,#-0x10]
+		-----------
+			Result Objects: [r3]
+			Input Objects: [r10, 0xfffffff0]
+		Assembly Instruction #1, Block #11: add r10,r10,#0x10
+		-----------
+			Result Objects: [tmpNG, tmpZR, tmpCY, tmpOV, shift_carry, r10]
+			Input Objects: [0x10, 0x0, CY, r10, 0x1f]
+
+--> NEW PATH CREATED
+		===============
+		Assembly Instruction #2, Block #12: bne 0x00082a3c
+		-----------
+			Result Objects: []
+			Input Objects: [ZR]
+		Assembly Instruction #1, Block #12: subs r11,r0,#0x0
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry, r11]
+			Input Objects: [0x0, r0, CY, 0x1f]
+		===============
+		Assembly Instruction #4, Block #13: bl 0x000163a8
+		Assembly Instruction #3, Block #13: ldr r0,[r10,#-0xc]
+		-----------
+			Result Objects: [r0]
+			Input Objects: [r10, 0xfffffff4]
+		Assembly Instruction #2, Block #13: cpy r1,r5
+		-----------
+			Result Objects: [r1]
+			Input Objects: [r5]
+		Assembly Instruction #1, Block #13: mov r2,#0x2
+		-----------
+			Result Objects: [tmpNG, tmpZR, tmpCY, tmpOV, shift_carry, r2]
+			Input Objects: [0x0, 0x2, CY, OV, 0x1f]
+		===============
+		Assembly Instruction #3, Block #14: bne 0x00082a3c
+		-----------
+			Result Objects: []
+			Input Objects: [ZR]
+		Assembly Instruction #2, Block #14: cmpne r6,r3
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, ZR, CY, r6, r3]
+		Assembly Instruction #1, Block #14: cmn r3,#0x1
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, 0x1, CY, r3, 0x1f]
+		===============
+		Assembly Instruction #5, Block #15: beq 0x00082a24
+
+--> NEW PATH CREATED
+		===============
+		Assembly Instruction #2, Block #16: bne 0x00082a3c
+
+--> Continuing back to previous path...
+
+--> NEW PATH CREATED
+		===============
+		Assembly Instruction #3, Block #16: cpy r6,r0
+
+--> Continuing back to previous path...
+		===============
+		Assembly Instruction #3, Block #16: bne 0x00082a3c
+
+--> Continuing back to previous path...
+
+--> NEW PATH CREATED
+		===============
+		Assembly Instruction #3, Block #12: cpy r6,r0
+		-----------
+			Result Objects: [r6]
+			Input Objects: [r0]
+		Assembly Instruction #2, Block #12: ldr r10,[r4,r3]
+		-----------
+			Result Objects: [r10]
+			Input Objects: [r4, r3]
+		Assembly Instruction #1, Block #12: ldr r3,[0x82c7c]
+		-----------
+			Result Objects: [r3]
+			Input Objects: [00082c7c]
+		===============
+		Assembly Instruction #1, Block #13: bl 0x00016eb8
+		===============
+		Assembly Instruction #2, Block #14: bgt 0x00082a2c
+		-----------
+			Result Objects: []
+			Input Objects: [NG, ZR, OV]
+		Assembly Instruction #1, Block #14: cmp r0,#0x0
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, r0, CY, 0x1f]
+		===============
+		Assembly Instruction #6, Block #15: bl 0x00016738
+		===============
+		Assembly Instruction #4, Block #16: bl 0x0007a854
+
+--> Continuing back to previous path...
+		===============
+		Assembly Instruction #3, Block #12: bne 0x00082a3c
+		-----------
+			Result Objects: []
+			Input Objects: [ZR]
+		Assembly Instruction #2, Block #12: cmpne r6,r3
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, ZR, CY, r6, r3]
+		Assembly Instruction #1, Block #12: cmn r3,#0x1
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, 0x1, CY, r3, 0x1f]
+		===============
+		Assembly Instruction #5, Block #13: beq 0x00082a24
+		-----------
+			Result Objects: []
+			Input Objects: [ZR]
+		Assembly Instruction #4, Block #13: cmp r3,#0x0
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, CY, r3, 0x1f]
+		Assembly Instruction #3, Block #13: sub r7,r10,#0x10
+		-----------
+			Result Objects: [tmpNG, tmpZR, tmpCY, tmpOV, shift_carry, r7]
+			Input Objects: [0x10, 0x0, CY, r10, 0x1f]
+		Assembly Instruction #2, Block #13: ldr r3,[r10,#-0x10]
+		-----------
+			Result Objects: [r3]
+			Input Objects: [r10, 0xfffffff0]
+		Assembly Instruction #1, Block #13: add r10,r10,#0x10
+		-----------
+			Result Objects: [tmpNG, tmpZR, tmpCY, tmpOV, shift_carry, r10]
+			Input Objects: [0x10, 0x0, CY, r10, 0x1f]
+
+--> NEW PATH CREATED
+		===============
+		Assembly Instruction #2, Block #14: bne 0x00082a3c
+		-----------
+			Result Objects: []
+			Input Objects: [ZR]
+		Assembly Instruction #1, Block #14: subs r11,r0,#0x0
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry, r11]
+			Input Objects: [0x0, r0, CY, 0x1f]
+		===============
+		Assembly Instruction #4, Block #15: bl 0x000163a8
+		===============
+		Assembly Instruction #3, Block #16: bne 0x00082a3c
+
+--> Continuing back to previous path...
+
+--> NEW PATH CREATED
+		===============
+		Assembly Instruction #3, Block #14: cpy r6,r0
+		-----------
+			Result Objects: [r6]
+			Input Objects: [r0]
+		Assembly Instruction #2, Block #14: ldr r10,[r4,r3]
+		-----------
+			Result Objects: [r10]
+			Input Objects: [r4, r3]
+		Assembly Instruction #1, Block #14: ldr r3,[0x82c7c]
+		-----------
+			Result Objects: [r3]
+			Input Objects: [00082c7c]
+		===============
+		Assembly Instruction #1, Block #15: bl 0x00016eb8
+		===============
+		Assembly Instruction #2, Block #16: bgt 0x00082a2c
+
+--> Continuing back to previous path...
+		===============
+		Assembly Instruction #3, Block #14: bne 0x00082a3c
+		-----------
+			Result Objects: []
+			Input Objects: [ZR]
+		Assembly Instruction #2, Block #14: cmpne r6,r3
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, ZR, CY, r6, r3]
+		Assembly Instruction #1, Block #14: cmn r3,#0x1
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, 0x1, CY, r3, 0x1f]
+		===============
+		Assembly Instruction #5, Block #15: beq 0x00082a24
+
+--> NEW PATH CREATED
+		===============
+		Assembly Instruction #2, Block #16: bne 0x00082a3c
+
+--> Continuing back to previous path...
+
+--> NEW PATH CREATED
+		===============
+		Assembly Instruction #3, Block #16: cpy r6,r0
+
+--> Continuing back to previous path...
+		===============
+		Assembly Instruction #3, Block #16: bne 0x00082a3c
+
+--> Continuing back to previous path...
+
+--> NEW PATH CREATED
+		===============
+		Assembly Instruction #3, Block #2: cpy r6,r0
+		-----------
+			Result Objects: [r6]
+			Input Objects: [r0]
+		Assembly Instruction #2, Block #2: ldr r10,[r4,r3]
+		-----------
+			Result Objects: [r10]
+			Input Objects: [r4, r3]
+		Assembly Instruction #1, Block #2: ldr r3,[0x82c7c]
+		-----------
+			Result Objects: [r3]
+			Input Objects: [00082c7c]
+		===============
+		Assembly Instruction #1, Block #3: bl 0x00016eb8
+		===============
+		Assembly Instruction #2, Block #4: bgt 0x00082a2c
+		-----------
+			Result Objects: []
+			Input Objects: [NG, ZR, OV]
+		Assembly Instruction #1, Block #4: cmp r0,#0x0
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, r0, CY, 0x1f]
+		===============
+		Assembly Instruction #6, Block #5: bl 0x00016738
+		Assembly Instruction #5, Block #5: cpy r0,r5
+		-----------
+			Result Objects: [r0]
+			Input Objects: [r5]
+		Assembly Instruction #4, Block #5: cpy r3,r0
+		-----------
+			Result Objects: [r3]
+			Input Objects: [r0]
+		Assembly Instruction #3, Block #5: add r2,pc,r2
+		-----------
+			Result Objects: [tmpNG, tmpZR, tmpCY, tmpOV, shift_carry, r2]
+			Input Objects: [0x0, CY, 0x82a0c, 0x8, r2]
+		Assembly Instruction #2, Block #5: mov r1,#0x7
+		-----------
+			Result Objects: [r1, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, CY, OV, 0x7, 0x1f]
+		Assembly Instruction #1, Block #5: ldr r2,[0x82c78]
+		-----------
+			Result Objects: [r2]
+			Input Objects: [00082c78]
+		===============
+		Assembly Instruction #4, Block #6: bl 0x0007a854
+		Assembly Instruction #3, Block #6: add r0,pc,r0
+		-----------
+			Result Objects: [r0, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [r0, 0x0, CY, 0x829fc, 0x8]
+		Assembly Instruction #2, Block #6: add r5,sp,#0x14
+		-----------
+			Result Objects: [r5, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, CY, 0x14, sp, 0x1f]
+		Assembly Instruction #1, Block #6: ldr r0,[0x82c74]
+		-----------
+			Result Objects: [r0]
+			Input Objects: [00082c74]
+		===============
+		Assembly Instruction #2, Block #7: beq 0x00082a24
+		-----------
+			Result Objects: []
+			Input Objects: [ZR]
+		Assembly Instruction #1, Block #7: cmp r0,#0x0
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, r0, CY, 0x1f]
+		===============
+		Assembly Instruction #3, Block #8: bl 0x00016204
+		Assembly Instruction #2, Block #8: add r1,pc,r1
+		-----------
+			Result Objects: [r1, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, CY, r1, 0x8, 0x829e4]
+		Assembly Instruction #1, Block #8: ldr r1,[0x82c70]
+		-----------
+			Result Objects: [r1]
+			Input Objects: [00082c70]
+		===============
+		Assembly Instruction #3, Block #9: bl 0x0007a854
+		Assembly Instruction #2, Block #9: add r0,pc,r0
+		-----------
+			Result Objects: [r0, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x829d8, r0, 0x0, CY, 0x8]
+		Assembly Instruction #1, Block #9: ldr r0,[0x82c6c]
+		-----------
+			Result Objects: [r0]
+			Input Objects: [00082c6c]
+		===============
+		Assembly Instruction #2, Block #10: beq 0x00082a24
+		-----------
+			Result Objects: []
+			Input Objects: [ZR]
+		Assembly Instruction #1, Block #10: cmp r0,#0x0
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, r0, CY, 0x1f]
+		===============
+		Assembly Instruction #2, Block #11: bl 0x0001a2d8
+		Assembly Instruction #1, Block #11: cpy r9,r0
+		-----------
+			Result Objects: [r9]
+			Input Objects: [r0]
+		===============
+		Assembly Instruction #12, Block #12: beq 0x00082a24
+		-----------
+			Result Objects: []
+			Input Objects: [ZR]
+		Assembly Instruction #11, Block #12: cmp r2,#0x0
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, CY, r2, 0x1f]
+		Assembly Instruction #10, Block #12: ldrb r2,[r0,#0x0]
+		-----------
+			Result Objects: [r2]
+			Input Objects: [r0, 0x0]
+		Assembly Instruction #9, Block #12: str r2,[sp,#0x24]
+		-----------
+			Result Objects: []
+			Input Objects: [sp, 0x24, r2]
+		Assembly Instruction #8, Block #12: str r3,[sp,#0x4]
+		-----------
+			Result Objects: []
+			Input Objects: [sp, 0x4, r3]
+		Assembly Instruction #7, Block #12: ldr r2,[r3,#0x0]
+		-----------
+			Result Objects: [r2]
+			Input Objects: [0x0, r3]
+		Assembly Instruction #6, Block #12: ldr r3,[r4,r3]
+		-----------
+			Result Objects: [r3]
+			Input Objects: [r4, r3]
+		Assembly Instruction #5, Block #12: add r4,pc,r4
+		-----------
+			Result Objects: [r4, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [r4, 0x0, CY, 0x8, 0x829a4]
+		Assembly Instruction #4, Block #12: ldr r3,[0x82c68]
+		-----------
+			Result Objects: [r3]
+			Input Objects: [00082c68]
+		Assembly Instruction #3, Block #12: ldr r4,[0x82c64]
+		-----------
+			Result Objects: [r4]
+			Input Objects: [00082c64]
+		Assembly Instruction #2, Block #12: sub sp,sp,#0x28
+		-----------
+			Result Objects: [sp, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, CY, sp, 0x28, 0x1f]
+		Assembly Instruction #1, Block #12: stmdb sp!,{r4 r5 r6 r7 r9 r10 r11 lr}
+		-----------
+			Result Objects: [mult_addr, sp]
+			Input Objects: [r4, sp, 0x4, r9, r5, lr, r10, r6, r11, r7]
+		===============
+		Assembly Instruction #1, Block #13: bl 0x00082994
+		===============
+		Assembly Instruction #3, Block #14: bl 0x0007a854
+		Assembly Instruction #2, Block #14: add r0,pc,r0
+		-----------
+			Result Objects: [r0, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [r0, 0x0, CY, 0x8, 0x82f74]
+		Assembly Instruction #1, Block #14: ldr r0,[0x83090]
+		-----------
+			Result Objects: [r0]
+			Input Objects: [00083090]
+		===============
+		Assembly Instruction #3, Block #15: bne 0x00082f70
+		===============
+		Assembly Instruction #4, Block #16: bl 0x0007a854
+
+--> Continuing back to previous path...
+		===============
+		Assembly Instruction #3, Block #2: bne 0x00082a3c
+		-----------
+			Result Objects: []
+			Input Objects: [ZR]
+		Assembly Instruction #2, Block #2: cmpne r6,r3
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, ZR, CY, r6, r3]
+		Assembly Instruction #1, Block #2: cmn r3,#0x1
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, 0x1, CY, r3, 0x1f]
+		===============
+		Assembly Instruction #5, Block #3: beq 0x00082a24
+		-----------
+			Result Objects: []
+			Input Objects: [ZR]
+		Assembly Instruction #4, Block #3: cmp r3,#0x0
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, CY, r3, 0x1f]
+		Assembly Instruction #3, Block #3: sub r7,r10,#0x10
+		-----------
+			Result Objects: [tmpNG, tmpZR, tmpCY, tmpOV, shift_carry, r7]
+			Input Objects: [0x10, 0x0, CY, r10, 0x1f]
+		Assembly Instruction #2, Block #3: ldr r3,[r10,#-0x10]
+		-----------
+			Result Objects: [r3]
+			Input Objects: [r10, 0xfffffff0]
+		Assembly Instruction #1, Block #3: add r10,r10,#0x10
+		-----------
+			Result Objects: [tmpNG, tmpZR, tmpCY, tmpOV, shift_carry, r10]
+			Input Objects: [0x10, 0x0, CY, r10, 0x1f]
+
+--> NEW PATH CREATED
+		===============
+		Assembly Instruction #2, Block #4: bne 0x00082a3c
+		-----------
+			Result Objects: []
+			Input Objects: [ZR]
+		Assembly Instruction #1, Block #4: subs r11,r0,#0x0
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry, r11]
+			Input Objects: [0x0, r0, CY, 0x1f]
+		===============
+		Assembly Instruction #4, Block #5: bl 0x000163a8
+		Assembly Instruction #3, Block #5: ldr r0,[r10,#-0xc]
+		-----------
+			Result Objects: [r0]
+			Input Objects: [r10, 0xfffffff4]
+		Assembly Instruction #2, Block #5: cpy r1,r5
+		-----------
+			Result Objects: [r1]
+			Input Objects: [r5]
+		Assembly Instruction #1, Block #5: mov r2,#0x2
+		-----------
+			Result Objects: [tmpNG, tmpZR, tmpCY, tmpOV, shift_carry, r2]
+			Input Objects: [0x0, 0x2, CY, OV, 0x1f]
+		===============
+		Assembly Instruction #3, Block #6: bne 0x00082a3c
+		-----------
+			Result Objects: []
+			Input Objects: [ZR]
+		Assembly Instruction #2, Block #6: cmpne r6,r3
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, ZR, CY, r6, r3]
+		Assembly Instruction #1, Block #6: cmn r3,#0x1
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, 0x1, CY, r3, 0x1f]
+		===============
+		Assembly Instruction #5, Block #7: beq 0x00082a24
+		-----------
+			Result Objects: []
+			Input Objects: [ZR]
+		Assembly Instruction #4, Block #7: cmp r3,#0x0
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, CY, r3, 0x1f]
+		Assembly Instruction #3, Block #7: sub r7,r10,#0x10
+		-----------
+			Result Objects: [tmpNG, tmpZR, tmpCY, tmpOV, shift_carry, r7]
+			Input Objects: [0x10, 0x0, CY, r10, 0x1f]
+		Assembly Instruction #2, Block #7: ldr r3,[r10,#-0x10]
+		-----------
+			Result Objects: [r3]
+			Input Objects: [r10, 0xfffffff0]
+		Assembly Instruction #1, Block #7: add r10,r10,#0x10
+		-----------
+			Result Objects: [tmpNG, tmpZR, tmpCY, tmpOV, shift_carry, r10]
+			Input Objects: [0x10, 0x0, CY, r10, 0x1f]
+
+--> NEW PATH CREATED
+		===============
+		Assembly Instruction #2, Block #8: bne 0x00082a3c
+		-----------
+			Result Objects: []
+			Input Objects: [ZR]
+		Assembly Instruction #1, Block #8: subs r11,r0,#0x0
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry, r11]
+			Input Objects: [0x0, r0, CY, 0x1f]
+		===============
+		Assembly Instruction #4, Block #9: bl 0x000163a8
+		Assembly Instruction #3, Block #9: ldr r0,[r10,#-0xc]
+		-----------
+			Result Objects: [r0]
+			Input Objects: [r10, 0xfffffff4]
+		Assembly Instruction #2, Block #9: cpy r1,r5
+		-----------
+			Result Objects: [r1]
+			Input Objects: [r5]
+		Assembly Instruction #1, Block #9: mov r2,#0x2
+		-----------
+			Result Objects: [tmpNG, tmpZR, tmpCY, tmpOV, shift_carry, r2]
+			Input Objects: [0x0, 0x2, CY, OV, 0x1f]
+		===============
+		Assembly Instruction #3, Block #10: bne 0x00082a3c
+		-----------
+			Result Objects: []
+			Input Objects: [ZR]
+		Assembly Instruction #2, Block #10: cmpne r6,r3
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, ZR, CY, r6, r3]
+		Assembly Instruction #1, Block #10: cmn r3,#0x1
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, 0x1, CY, r3, 0x1f]
+		===============
+		Assembly Instruction #5, Block #11: beq 0x00082a24
+		-----------
+			Result Objects: []
+			Input Objects: [ZR]
+		Assembly Instruction #4, Block #11: cmp r3,#0x0
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, CY, r3, 0x1f]
+		Assembly Instruction #3, Block #11: sub r7,r10,#0x10
+		-----------
+			Result Objects: [tmpNG, tmpZR, tmpCY, tmpOV, shift_carry, r7]
+			Input Objects: [0x10, 0x0, CY, r10, 0x1f]
+		Assembly Instruction #2, Block #11: ldr r3,[r10,#-0x10]
+		-----------
+			Result Objects: [r3]
+			Input Objects: [r10, 0xfffffff0]
+		Assembly Instruction #1, Block #11: add r10,r10,#0x10
+		-----------
+			Result Objects: [tmpNG, tmpZR, tmpCY, tmpOV, shift_carry, r10]
+			Input Objects: [0x10, 0x0, CY, r10, 0x1f]
+
+--> NEW PATH CREATED
+		===============
+		Assembly Instruction #2, Block #12: bne 0x00082a3c
+		-----------
+			Result Objects: []
+			Input Objects: [ZR]
+		Assembly Instruction #1, Block #12: subs r11,r0,#0x0
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry, r11]
+			Input Objects: [0x0, r0, CY, 0x1f]
+		===============
+		Assembly Instruction #4, Block #13: bl 0x000163a8
+		Assembly Instruction #3, Block #13: ldr r0,[r10,#-0xc]
+		-----------
+			Result Objects: [r0]
+			Input Objects: [r10, 0xfffffff4]
+		Assembly Instruction #2, Block #13: cpy r1,r5
+		-----------
+			Result Objects: [r1]
+			Input Objects: [r5]
+		Assembly Instruction #1, Block #13: mov r2,#0x2
+		-----------
+			Result Objects: [tmpNG, tmpZR, tmpCY, tmpOV, shift_carry, r2]
+			Input Objects: [0x0, 0x2, CY, OV, 0x1f]
+		===============
+		Assembly Instruction #3, Block #14: bne 0x00082a3c
+		-----------
+			Result Objects: []
+			Input Objects: [ZR]
+		Assembly Instruction #2, Block #14: cmpne r6,r3
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, ZR, CY, r6, r3]
+		Assembly Instruction #1, Block #14: cmn r3,#0x1
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, 0x1, CY, r3, 0x1f]
+		===============
+		Assembly Instruction #5, Block #15: beq 0x00082a24
+
+--> NEW PATH CREATED
+		===============
+		Assembly Instruction #2, Block #16: bne 0x00082a3c
+
+--> Continuing back to previous path...
+
+--> NEW PATH CREATED
+		===============
+		Assembly Instruction #3, Block #16: cpy r6,r0
+
+--> Continuing back to previous path...
+		===============
+		Assembly Instruction #3, Block #16: bne 0x00082a3c
+
+--> Continuing back to previous path...
+
+--> NEW PATH CREATED
+		===============
+		Assembly Instruction #3, Block #12: cpy r6,r0
+		-----------
+			Result Objects: [r6]
+			Input Objects: [r0]
+		Assembly Instruction #2, Block #12: ldr r10,[r4,r3]
+		-----------
+			Result Objects: [r10]
+			Input Objects: [r4, r3]
+		Assembly Instruction #1, Block #12: ldr r3,[0x82c7c]
+		-----------
+			Result Objects: [r3]
+			Input Objects: [00082c7c]
+		===============
+		Assembly Instruction #1, Block #13: bl 0x00016eb8
+		===============
+		Assembly Instruction #2, Block #14: bgt 0x00082a2c
+		-----------
+			Result Objects: []
+			Input Objects: [NG, ZR, OV]
+		Assembly Instruction #1, Block #14: cmp r0,#0x0
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, r0, CY, 0x1f]
+		===============
+		Assembly Instruction #6, Block #15: bl 0x00016738
+		===============
+		Assembly Instruction #4, Block #16: bl 0x0007a854
+
+--> Continuing back to previous path...
+		===============
+		Assembly Instruction #3, Block #12: bne 0x00082a3c
+		-----------
+			Result Objects: []
+			Input Objects: [ZR]
+		Assembly Instruction #2, Block #12: cmpne r6,r3
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, ZR, CY, r6, r3]
+		Assembly Instruction #1, Block #12: cmn r3,#0x1
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, 0x1, CY, r3, 0x1f]
+		===============
+		Assembly Instruction #5, Block #13: beq 0x00082a24
+		-----------
+			Result Objects: []
+			Input Objects: [ZR]
+		Assembly Instruction #4, Block #13: cmp r3,#0x0
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, CY, r3, 0x1f]
+		Assembly Instruction #3, Block #13: sub r7,r10,#0x10
+		-----------
+			Result Objects: [tmpNG, tmpZR, tmpCY, tmpOV, shift_carry, r7]
+			Input Objects: [0x10, 0x0, CY, r10, 0x1f]
+		Assembly Instruction #2, Block #13: ldr r3,[r10,#-0x10]
+		-----------
+			Result Objects: [r3]
+			Input Objects: [r10, 0xfffffff0]
+		Assembly Instruction #1, Block #13: add r10,r10,#0x10
+		-----------
+			Result Objects: [tmpNG, tmpZR, tmpCY, tmpOV, shift_carry, r10]
+			Input Objects: [0x10, 0x0, CY, r10, 0x1f]
+
+--> NEW PATH CREATED
+		===============
+		Assembly Instruction #2, Block #14: bne 0x00082a3c
+		-----------
+			Result Objects: []
+			Input Objects: [ZR]
+		Assembly Instruction #1, Block #14: subs r11,r0,#0x0
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry, r11]
+			Input Objects: [0x0, r0, CY, 0x1f]
+		===============
+		Assembly Instruction #4, Block #15: bl 0x000163a8
+		===============
+		Assembly Instruction #3, Block #16: bne 0x00082a3c
+
+--> Continuing back to previous path...
+
+--> NEW PATH CREATED
+		===============
+		Assembly Instruction #3, Block #14: cpy r6,r0
+		-----------
+			Result Objects: [r6]
+			Input Objects: [r0]
+		Assembly Instruction #2, Block #14: ldr r10,[r4,r3]
+		-----------
+			Result Objects: [r10]
+			Input Objects: [r4, r3]
+		Assembly Instruction #1, Block #14: ldr r3,[0x82c7c]
+		-----------
+			Result Objects: [r3]
+			Input Objects: [00082c7c]
+		===============
+		Assembly Instruction #1, Block #15: bl 0x00016eb8
+		===============
+		Assembly Instruction #2, Block #16: bgt 0x00082a2c
+
+--> Continuing back to previous path...
+		===============
+		Assembly Instruction #3, Block #14: bne 0x00082a3c
+		-----------
+			Result Objects: []
+			Input Objects: [ZR]
+		Assembly Instruction #2, Block #14: cmpne r6,r3
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, ZR, CY, r6, r3]
+		Assembly Instruction #1, Block #14: cmn r3,#0x1
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, 0x1, CY, r3, 0x1f]
+		===============
+		Assembly Instruction #5, Block #15: beq 0x00082a24
+
+--> NEW PATH CREATED
+		===============
+		Assembly Instruction #2, Block #16: bne 0x00082a3c
+
+--> Continuing back to previous path...
+
+--> NEW PATH CREATED
+		===============
+		Assembly Instruction #3, Block #16: cpy r6,r0
+
+--> Continuing back to previous path...
+		===============
+		Assembly Instruction #3, Block #16: bne 0x00082a3c
+
+--> Continuing back to previous path...
+
+--> NEW PATH CREATED
+		===============
+		Assembly Instruction #3, Block #8: cpy r6,r0
+		-----------
+			Result Objects: [r6]
+			Input Objects: [r0]
+		Assembly Instruction #2, Block #8: ldr r10,[r4,r3]
+		-----------
+			Result Objects: [r10]
+			Input Objects: [r4, r3]
+		Assembly Instruction #1, Block #8: ldr r3,[0x82c7c]
+		-----------
+			Result Objects: [r3]
+			Input Objects: [00082c7c]
+		===============
+		Assembly Instruction #1, Block #9: bl 0x00016eb8
+		===============
+		Assembly Instruction #2, Block #10: bgt 0x00082a2c
+		-----------
+			Result Objects: []
+			Input Objects: [NG, ZR, OV]
+		Assembly Instruction #1, Block #10: cmp r0,#0x0
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, r0, CY, 0x1f]
+		===============
+		Assembly Instruction #6, Block #11: bl 0x00016738
+		Assembly Instruction #5, Block #11: cpy r0,r5
+		-----------
+			Result Objects: [r0]
+			Input Objects: [r5]
+		Assembly Instruction #4, Block #11: cpy r3,r0
+		-----------
+			Result Objects: [r3]
+			Input Objects: [r0]
+		Assembly Instruction #3, Block #11: add r2,pc,r2
+		-----------
+			Result Objects: [tmpNG, tmpZR, tmpCY, tmpOV, shift_carry, r2]
+			Input Objects: [0x0, CY, 0x82a0c, 0x8, r2]
+		Assembly Instruction #2, Block #11: mov r1,#0x7
+		-----------
+			Result Objects: [r1, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, CY, OV, 0x7, 0x1f]
+		Assembly Instruction #1, Block #11: ldr r2,[0x82c78]
+		-----------
+			Result Objects: [r2]
+			Input Objects: [00082c78]
+		===============
+		Assembly Instruction #4, Block #12: bl 0x0007a854
+		Assembly Instruction #3, Block #12: add r0,pc,r0
+		-----------
+			Result Objects: [r0, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [r0, 0x0, CY, 0x829fc, 0x8]
+		Assembly Instruction #2, Block #12: add r5,sp,#0x14
+		-----------
+			Result Objects: [r5, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, CY, 0x14, sp, 0x1f]
+		Assembly Instruction #1, Block #12: ldr r0,[0x82c74]
+		-----------
+			Result Objects: [r0]
+			Input Objects: [00082c74]
+		===============
+		Assembly Instruction #2, Block #13: beq 0x00082a24
+		-----------
+			Result Objects: []
+			Input Objects: [ZR]
+		Assembly Instruction #1, Block #13: cmp r0,#0x0
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, r0, CY, 0x1f]
+		===============
+		Assembly Instruction #3, Block #14: bl 0x00016204
+		Assembly Instruction #2, Block #14: add r1,pc,r1
+		-----------
+			Result Objects: [r1, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, CY, r1, 0x8, 0x829e4]
+		Assembly Instruction #1, Block #14: ldr r1,[0x82c70]
+		-----------
+			Result Objects: [r1]
+			Input Objects: [00082c70]
+		===============
+		Assembly Instruction #3, Block #15: bl 0x0007a854
+		===============
+		Assembly Instruction #2, Block #16: beq 0x00082a24
+
+--> Continuing back to previous path...
+		===============
+		Assembly Instruction #3, Block #8: bne 0x00082a3c
+		-----------
+			Result Objects: []
+			Input Objects: [ZR]
+		Assembly Instruction #2, Block #8: cmpne r6,r3
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, ZR, CY, r6, r3]
+		Assembly Instruction #1, Block #8: cmn r3,#0x1
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, 0x1, CY, r3, 0x1f]
+		===============
+		Assembly Instruction #5, Block #9: beq 0x00082a24
+		-----------
+			Result Objects: []
+			Input Objects: [ZR]
+		Assembly Instruction #4, Block #9: cmp r3,#0x0
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, CY, r3, 0x1f]
+		Assembly Instruction #3, Block #9: sub r7,r10,#0x10
+		-----------
+			Result Objects: [tmpNG, tmpZR, tmpCY, tmpOV, shift_carry, r7]
+			Input Objects: [0x10, 0x0, CY, r10, 0x1f]
+		Assembly Instruction #2, Block #9: ldr r3,[r10,#-0x10]
+		-----------
+			Result Objects: [r3]
+			Input Objects: [r10, 0xfffffff0]
+		Assembly Instruction #1, Block #9: add r10,r10,#0x10
+		-----------
+			Result Objects: [tmpNG, tmpZR, tmpCY, tmpOV, shift_carry, r10]
+			Input Objects: [0x10, 0x0, CY, r10, 0x1f]
+
+--> NEW PATH CREATED
+		===============
+		Assembly Instruction #2, Block #10: bne 0x00082a3c
+		-----------
+			Result Objects: []
+			Input Objects: [ZR]
+		Assembly Instruction #1, Block #10: subs r11,r0,#0x0
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry, r11]
+			Input Objects: [0x0, r0, CY, 0x1f]
+		===============
+		Assembly Instruction #4, Block #11: bl 0x000163a8
+		Assembly Instruction #3, Block #11: ldr r0,[r10,#-0xc]
+		-----------
+			Result Objects: [r0]
+			Input Objects: [r10, 0xfffffff4]
+		Assembly Instruction #2, Block #11: cpy r1,r5
+		-----------
+			Result Objects: [r1]
+			Input Objects: [r5]
+		Assembly Instruction #1, Block #11: mov r2,#0x2
+		-----------
+			Result Objects: [tmpNG, tmpZR, tmpCY, tmpOV, shift_carry, r2]
+			Input Objects: [0x0, 0x2, CY, OV, 0x1f]
+		===============
+		Assembly Instruction #3, Block #12: bne 0x00082a3c
+		-----------
+			Result Objects: []
+			Input Objects: [ZR]
+		Assembly Instruction #2, Block #12: cmpne r6,r3
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, ZR, CY, r6, r3]
+		Assembly Instruction #1, Block #12: cmn r3,#0x1
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, 0x1, CY, r3, 0x1f]
+		===============
+		Assembly Instruction #5, Block #13: beq 0x00082a24
+		-----------
+			Result Objects: []
+			Input Objects: [ZR]
+		Assembly Instruction #4, Block #13: cmp r3,#0x0
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, CY, r3, 0x1f]
+		Assembly Instruction #3, Block #13: sub r7,r10,#0x10
+		-----------
+			Result Objects: [tmpNG, tmpZR, tmpCY, tmpOV, shift_carry, r7]
+			Input Objects: [0x10, 0x0, CY, r10, 0x1f]
+		Assembly Instruction #2, Block #13: ldr r3,[r10,#-0x10]
+		-----------
+			Result Objects: [r3]
+			Input Objects: [r10, 0xfffffff0]
+		Assembly Instruction #1, Block #13: add r10,r10,#0x10
+		-----------
+			Result Objects: [tmpNG, tmpZR, tmpCY, tmpOV, shift_carry, r10]
+			Input Objects: [0x10, 0x0, CY, r10, 0x1f]
+
+--> NEW PATH CREATED
+		===============
+		Assembly Instruction #2, Block #14: bne 0x00082a3c
+		-----------
+			Result Objects: []
+			Input Objects: [ZR]
+		Assembly Instruction #1, Block #14: subs r11,r0,#0x0
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry, r11]
+			Input Objects: [0x0, r0, CY, 0x1f]
+		===============
+		Assembly Instruction #4, Block #15: bl 0x000163a8
+		===============
+		Assembly Instruction #3, Block #16: bne 0x00082a3c
+
+--> Continuing back to previous path...
+
+--> NEW PATH CREATED
+		===============
+		Assembly Instruction #3, Block #14: cpy r6,r0
+		-----------
+			Result Objects: [r6]
+			Input Objects: [r0]
+		Assembly Instruction #2, Block #14: ldr r10,[r4,r3]
+		-----------
+			Result Objects: [r10]
+			Input Objects: [r4, r3]
+		Assembly Instruction #1, Block #14: ldr r3,[0x82c7c]
+		-----------
+			Result Objects: [r3]
+			Input Objects: [00082c7c]
+		===============
+		Assembly Instruction #1, Block #15: bl 0x00016eb8
+		===============
+		Assembly Instruction #2, Block #16: bgt 0x00082a2c
+
+--> Continuing back to previous path...
+		===============
+		Assembly Instruction #3, Block #14: bne 0x00082a3c
+		-----------
+			Result Objects: []
+			Input Objects: [ZR]
+		Assembly Instruction #2, Block #14: cmpne r6,r3
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, ZR, CY, r6, r3]
+		Assembly Instruction #1, Block #14: cmn r3,#0x1
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, 0x1, CY, r3, 0x1f]
+		===============
+		Assembly Instruction #5, Block #15: beq 0x00082a24
+
+--> NEW PATH CREATED
+		===============
+		Assembly Instruction #2, Block #16: bne 0x00082a3c
+
+--> Continuing back to previous path...
+
+--> NEW PATH CREATED
+		===============
+		Assembly Instruction #3, Block #16: cpy r6,r0
+
+--> Continuing back to previous path...
+		===============
+		Assembly Instruction #3, Block #16: bne 0x00082a3c
+
+--> Continuing back to previous path...
+
+--> NEW PATH CREATED
+		===============
+		Assembly Instruction #3, Block #10: cpy r6,r0
+		-----------
+			Result Objects: [r6]
+			Input Objects: [r0]
+		Assembly Instruction #2, Block #10: ldr r10,[r4,r3]
+		-----------
+			Result Objects: [r10]
+			Input Objects: [r4, r3]
+		Assembly Instruction #1, Block #10: ldr r3,[0x82c7c]
+		-----------
+			Result Objects: [r3]
+			Input Objects: [00082c7c]
+		===============
+		Assembly Instruction #1, Block #11: bl 0x00016eb8
+		===============
+		Assembly Instruction #2, Block #12: bgt 0x00082a2c
+		-----------
+			Result Objects: []
+			Input Objects: [NG, ZR, OV]
+		Assembly Instruction #1, Block #12: cmp r0,#0x0
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, r0, CY, 0x1f]
+		===============
+		Assembly Instruction #6, Block #13: bl 0x00016738
+		Assembly Instruction #5, Block #13: cpy r0,r5
+		-----------
+			Result Objects: [r0]
+			Input Objects: [r5]
+		Assembly Instruction #4, Block #13: cpy r3,r0
+		-----------
+			Result Objects: [r3]
+			Input Objects: [r0]
+		Assembly Instruction #3, Block #13: add r2,pc,r2
+		-----------
+			Result Objects: [tmpNG, tmpZR, tmpCY, tmpOV, shift_carry, r2]
+			Input Objects: [0x0, CY, 0x82a0c, 0x8, r2]
+		Assembly Instruction #2, Block #13: mov r1,#0x7
+		-----------
+			Result Objects: [r1, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, CY, OV, 0x7, 0x1f]
+		Assembly Instruction #1, Block #13: ldr r2,[0x82c78]
+		-----------
+			Result Objects: [r2]
+			Input Objects: [00082c78]
+		===============
+		Assembly Instruction #4, Block #14: bl 0x0007a854
+		Assembly Instruction #3, Block #14: add r0,pc,r0
+		-----------
+			Result Objects: [r0, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [r0, 0x0, CY, 0x829fc, 0x8]
+		Assembly Instruction #2, Block #14: add r5,sp,#0x14
+		-----------
+			Result Objects: [r5, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, CY, 0x14, sp, 0x1f]
+		Assembly Instruction #1, Block #14: ldr r0,[0x82c74]
+		-----------
+			Result Objects: [r0]
+			Input Objects: [00082c74]
+		===============
+		Assembly Instruction #2, Block #15: beq 0x00082a24
+		===============
+		Assembly Instruction #3, Block #16: bl 0x00016204
+
+--> Continuing back to previous path...
+		===============
+		Assembly Instruction #3, Block #10: bne 0x00082a3c
+		-----------
+			Result Objects: []
+			Input Objects: [ZR]
+		Assembly Instruction #2, Block #10: cmpne r6,r3
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, ZR, CY, r6, r3]
+		Assembly Instruction #1, Block #10: cmn r3,#0x1
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, 0x1, CY, r3, 0x1f]
+		===============
+		Assembly Instruction #5, Block #11: beq 0x00082a24
+		-----------
+			Result Objects: []
+			Input Objects: [ZR]
+		Assembly Instruction #4, Block #11: cmp r3,#0x0
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, CY, r3, 0x1f]
+		Assembly Instruction #3, Block #11: sub r7,r10,#0x10
+		-----------
+			Result Objects: [tmpNG, tmpZR, tmpCY, tmpOV, shift_carry, r7]
+			Input Objects: [0x10, 0x0, CY, r10, 0x1f]
+		Assembly Instruction #2, Block #11: ldr r3,[r10,#-0x10]
+		-----------
+			Result Objects: [r3]
+			Input Objects: [r10, 0xfffffff0]
+		Assembly Instruction #1, Block #11: add r10,r10,#0x10
+		-----------
+			Result Objects: [tmpNG, tmpZR, tmpCY, tmpOV, shift_carry, r10]
+			Input Objects: [0x10, 0x0, CY, r10, 0x1f]
+
+--> NEW PATH CREATED
+		===============
+		Assembly Instruction #2, Block #12: bne 0x00082a3c
+		-----------
+			Result Objects: []
+			Input Objects: [ZR]
+		Assembly Instruction #1, Block #12: subs r11,r0,#0x0
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry, r11]
+			Input Objects: [0x0, r0, CY, 0x1f]
+		===============
+		Assembly Instruction #4, Block #13: bl 0x000163a8
+		Assembly Instruction #3, Block #13: ldr r0,[r10,#-0xc]
+		-----------
+			Result Objects: [r0]
+			Input Objects: [r10, 0xfffffff4]
+		Assembly Instruction #2, Block #13: cpy r1,r5
+		-----------
+			Result Objects: [r1]
+			Input Objects: [r5]
+		Assembly Instruction #1, Block #13: mov r2,#0x2
+		-----------
+			Result Objects: [tmpNG, tmpZR, tmpCY, tmpOV, shift_carry, r2]
+			Input Objects: [0x0, 0x2, CY, OV, 0x1f]
+		===============
+		Assembly Instruction #3, Block #14: bne 0x00082a3c
+		-----------
+			Result Objects: []
+			Input Objects: [ZR]
+		Assembly Instruction #2, Block #14: cmpne r6,r3
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, ZR, CY, r6, r3]
+		Assembly Instruction #1, Block #14: cmn r3,#0x1
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, 0x1, CY, r3, 0x1f]
+		===============
+		Assembly Instruction #5, Block #15: beq 0x00082a24
+
+--> NEW PATH CREATED
+		===============
+		Assembly Instruction #2, Block #16: bne 0x00082a3c
+
+--> Continuing back to previous path...
+
+--> NEW PATH CREATED
+		===============
+		Assembly Instruction #3, Block #16: cpy r6,r0
+
+--> Continuing back to previous path...
+		===============
+		Assembly Instruction #3, Block #16: bne 0x00082a3c
+
+--> Continuing back to previous path...
+
+--> NEW PATH CREATED
+		===============
+		Assembly Instruction #3, Block #12: cpy r6,r0
+		-----------
+			Result Objects: [r6]
+			Input Objects: [r0]
+		Assembly Instruction #2, Block #12: ldr r10,[r4,r3]
+		-----------
+			Result Objects: [r10]
+			Input Objects: [r4, r3]
+		Assembly Instruction #1, Block #12: ldr r3,[0x82c7c]
+		-----------
+			Result Objects: [r3]
+			Input Objects: [00082c7c]
+		===============
+		Assembly Instruction #1, Block #13: bl 0x00016eb8
+		===============
+		Assembly Instruction #2, Block #14: bgt 0x00082a2c
+		-----------
+			Result Objects: []
+			Input Objects: [NG, ZR, OV]
+		Assembly Instruction #1, Block #14: cmp r0,#0x0
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, r0, CY, 0x1f]
+		===============
+		Assembly Instruction #6, Block #15: bl 0x00016738
+		===============
+		Assembly Instruction #4, Block #16: bl 0x0007a854
+
+--> Continuing back to previous path...
+		===============
+		Assembly Instruction #3, Block #12: bne 0x00082a3c
+		-----------
+			Result Objects: []
+			Input Objects: [ZR]
+		Assembly Instruction #2, Block #12: cmpne r6,r3
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, ZR, CY, r6, r3]
+		Assembly Instruction #1, Block #12: cmn r3,#0x1
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, 0x1, CY, r3, 0x1f]
+		===============
+		Assembly Instruction #5, Block #13: beq 0x00082a24
+		-----------
+			Result Objects: []
+			Input Objects: [ZR]
+		Assembly Instruction #4, Block #13: cmp r3,#0x0
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, CY, r3, 0x1f]
+		Assembly Instruction #3, Block #13: sub r7,r10,#0x10
+		-----------
+			Result Objects: [tmpNG, tmpZR, tmpCY, tmpOV, shift_carry, r7]
+			Input Objects: [0x10, 0x0, CY, r10, 0x1f]
+		Assembly Instruction #2, Block #13: ldr r3,[r10,#-0x10]
+		-----------
+			Result Objects: [r3]
+			Input Objects: [r10, 0xfffffff0]
+		Assembly Instruction #1, Block #13: add r10,r10,#0x10
+		-----------
+			Result Objects: [tmpNG, tmpZR, tmpCY, tmpOV, shift_carry, r10]
+			Input Objects: [0x10, 0x0, CY, r10, 0x1f]
+
+--> NEW PATH CREATED
+		===============
+		Assembly Instruction #2, Block #14: bne 0x00082a3c
+		-----------
+			Result Objects: []
+			Input Objects: [ZR]
+		Assembly Instruction #1, Block #14: subs r11,r0,#0x0
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry, r11]
+			Input Objects: [0x0, r0, CY, 0x1f]
+		===============
+		Assembly Instruction #4, Block #15: bl 0x000163a8
+		===============
+		Assembly Instruction #3, Block #16: bne 0x00082a3c
+
+--> Continuing back to previous path...
+
+--> NEW PATH CREATED
+		===============
+		Assembly Instruction #3, Block #14: cpy r6,r0
+		-----------
+			Result Objects: [r6]
+			Input Objects: [r0]
+		Assembly Instruction #2, Block #14: ldr r10,[r4,r3]
+		-----------
+			Result Objects: [r10]
+			Input Objects: [r4, r3]
+		Assembly Instruction #1, Block #14: ldr r3,[0x82c7c]
+		-----------
+			Result Objects: [r3]
+			Input Objects: [00082c7c]
+		===============
+		Assembly Instruction #1, Block #15: bl 0x00016eb8
+		===============
+		Assembly Instruction #2, Block #16: bgt 0x00082a2c
+
+--> Continuing back to previous path...
+		===============
+		Assembly Instruction #3, Block #14: bne 0x00082a3c
+		-----------
+			Result Objects: []
+			Input Objects: [ZR]
+		Assembly Instruction #2, Block #14: cmpne r6,r3
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, ZR, CY, r6, r3]
+		Assembly Instruction #1, Block #14: cmn r3,#0x1
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, 0x1, CY, r3, 0x1f]
+		===============
+		Assembly Instruction #5, Block #15: beq 0x00082a24
+
+--> NEW PATH CREATED
+		===============
+		Assembly Instruction #2, Block #16: bne 0x00082a3c
+
+--> Continuing back to previous path...
+
+--> NEW PATH CREATED
+		===============
+		Assembly Instruction #3, Block #16: cpy r6,r0
+
+--> Continuing back to previous path...
+		===============
+		Assembly Instruction #3, Block #16: bne 0x00082a3c
+
+--> Continuing back to previous path...
+
+--> NEW PATH CREATED
+		===============
+		Assembly Instruction #3, Block #4: cpy r6,r0
+		-----------
+			Result Objects: [r6]
+			Input Objects: [r0]
+		Assembly Instruction #2, Block #4: ldr r10,[r4,r3]
+		-----------
+			Result Objects: [r10]
+			Input Objects: [r4, r3]
+		Assembly Instruction #1, Block #4: ldr r3,[0x82c7c]
+		-----------
+			Result Objects: [r3]
+			Input Objects: [00082c7c]
+		===============
+		Assembly Instruction #1, Block #5: bl 0x00016eb8
+		===============
+		Assembly Instruction #2, Block #6: bgt 0x00082a2c
+		-----------
+			Result Objects: []
+			Input Objects: [NG, ZR, OV]
+		Assembly Instruction #1, Block #6: cmp r0,#0x0
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, r0, CY, 0x1f]
+		===============
+		Assembly Instruction #6, Block #7: bl 0x00016738
+		Assembly Instruction #5, Block #7: cpy r0,r5
+		-----------
+			Result Objects: [r0]
+			Input Objects: [r5]
+		Assembly Instruction #4, Block #7: cpy r3,r0
+		-----------
+			Result Objects: [r3]
+			Input Objects: [r0]
+		Assembly Instruction #3, Block #7: add r2,pc,r2
+		-----------
+			Result Objects: [tmpNG, tmpZR, tmpCY, tmpOV, shift_carry, r2]
+			Input Objects: [0x0, CY, 0x82a0c, 0x8, r2]
+		Assembly Instruction #2, Block #7: mov r1,#0x7
+		-----------
+			Result Objects: [r1, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, CY, OV, 0x7, 0x1f]
+		Assembly Instruction #1, Block #7: ldr r2,[0x82c78]
+		-----------
+			Result Objects: [r2]
+			Input Objects: [00082c78]
+		===============
+		Assembly Instruction #4, Block #8: bl 0x0007a854
+		Assembly Instruction #3, Block #8: add r0,pc,r0
+		-----------
+			Result Objects: [r0, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [r0, 0x0, CY, 0x829fc, 0x8]
+		Assembly Instruction #2, Block #8: add r5,sp,#0x14
+		-----------
+			Result Objects: [r5, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, CY, 0x14, sp, 0x1f]
+		Assembly Instruction #1, Block #8: ldr r0,[0x82c74]
+		-----------
+			Result Objects: [r0]
+			Input Objects: [00082c74]
+		===============
+		Assembly Instruction #2, Block #9: beq 0x00082a24
+		-----------
+			Result Objects: []
+			Input Objects: [ZR]
+		Assembly Instruction #1, Block #9: cmp r0,#0x0
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, r0, CY, 0x1f]
+		===============
+		Assembly Instruction #3, Block #10: bl 0x00016204
+		Assembly Instruction #2, Block #10: add r1,pc,r1
+		-----------
+			Result Objects: [r1, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, CY, r1, 0x8, 0x829e4]
+		Assembly Instruction #1, Block #10: ldr r1,[0x82c70]
+		-----------
+			Result Objects: [r1]
+			Input Objects: [00082c70]
+		===============
+		Assembly Instruction #3, Block #11: bl 0x0007a854
+		Assembly Instruction #2, Block #11: add r0,pc,r0
+		-----------
+			Result Objects: [r0, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x829d8, r0, 0x0, CY, 0x8]
+		Assembly Instruction #1, Block #11: ldr r0,[0x82c6c]
+		-----------
+			Result Objects: [r0]
+			Input Objects: [00082c6c]
+		===============
+		Assembly Instruction #2, Block #12: beq 0x00082a24
+		-----------
+			Result Objects: []
+			Input Objects: [ZR]
+		Assembly Instruction #1, Block #12: cmp r0,#0x0
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, r0, CY, 0x1f]
+		===============
+		Assembly Instruction #2, Block #13: bl 0x0001a2d8
+		Assembly Instruction #1, Block #13: cpy r9,r0
+		-----------
+			Result Objects: [r9]
+			Input Objects: [r0]
+		===============
+		Assembly Instruction #12, Block #14: beq 0x00082a24
+		-----------
+			Result Objects: []
+			Input Objects: [ZR]
+		Assembly Instruction #11, Block #14: cmp r2,#0x0
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, CY, r2, 0x1f]
+		Assembly Instruction #10, Block #14: ldrb r2,[r0,#0x0]
+		-----------
+			Result Objects: [r2]
+			Input Objects: [r0, 0x0]
+		Assembly Instruction #9, Block #14: str r2,[sp,#0x24]
+		-----------
+			Result Objects: []
+			Input Objects: [sp, 0x24, r2]
+		Assembly Instruction #8, Block #14: str r3,[sp,#0x4]
+		-----------
+			Result Objects: []
+			Input Objects: [sp, 0x4, r3]
+		Assembly Instruction #7, Block #14: ldr r2,[r3,#0x0]
+		-----------
+			Result Objects: [r2]
+			Input Objects: [0x0, r3]
+		Assembly Instruction #6, Block #14: ldr r3,[r4,r3]
+		-----------
+			Result Objects: [r3]
+			Input Objects: [r4, r3]
+		Assembly Instruction #5, Block #14: add r4,pc,r4
+		-----------
+			Result Objects: [r4, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [r4, 0x0, CY, 0x8, 0x829a4]
+		Assembly Instruction #4, Block #14: ldr r3,[0x82c68]
+		-----------
+			Result Objects: [r3]
+			Input Objects: [00082c68]
+		Assembly Instruction #3, Block #14: ldr r4,[0x82c64]
+		-----------
+			Result Objects: [r4]
+			Input Objects: [00082c64]
+		Assembly Instruction #2, Block #14: sub sp,sp,#0x28
+		-----------
+			Result Objects: [sp, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, CY, sp, 0x28, 0x1f]
+		Assembly Instruction #1, Block #14: stmdb sp!,{r4 r5 r6 r7 r9 r10 r11 lr}
+		-----------
+			Result Objects: [mult_addr, sp]
+			Input Objects: [r4, sp, 0x4, r9, r5, lr, r10, r6, r11, r7]
+		===============
+		Assembly Instruction #1, Block #15: bl 0x00082994
+		===============
+		Assembly Instruction #3, Block #16: bl 0x0007a854
+
+--> Continuing back to previous path...
+		===============
+		Assembly Instruction #3, Block #4: bne 0x00082a3c
+		-----------
+			Result Objects: []
+			Input Objects: [ZR]
+		Assembly Instruction #2, Block #4: cmpne r6,r3
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, ZR, CY, r6, r3]
+		Assembly Instruction #1, Block #4: cmn r3,#0x1
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, 0x1, CY, r3, 0x1f]
+		===============
+		Assembly Instruction #5, Block #5: beq 0x00082a24
+		-----------
+			Result Objects: []
+			Input Objects: [ZR]
+		Assembly Instruction #4, Block #5: cmp r3,#0x0
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, CY, r3, 0x1f]
+		Assembly Instruction #3, Block #5: sub r7,r10,#0x10
+		-----------
+			Result Objects: [tmpNG, tmpZR, tmpCY, tmpOV, shift_carry, r7]
+			Input Objects: [0x10, 0x0, CY, r10, 0x1f]
+		Assembly Instruction #2, Block #5: ldr r3,[r10,#-0x10]
+		-----------
+			Result Objects: [r3]
+			Input Objects: [r10, 0xfffffff0]
+		Assembly Instruction #1, Block #5: add r10,r10,#0x10
+		-----------
+			Result Objects: [tmpNG, tmpZR, tmpCY, tmpOV, shift_carry, r10]
+			Input Objects: [0x10, 0x0, CY, r10, 0x1f]
+
+--> NEW PATH CREATED
+		===============
+		Assembly Instruction #2, Block #6: bne 0x00082a3c
+		-----------
+			Result Objects: []
+			Input Objects: [ZR]
+		Assembly Instruction #1, Block #6: subs r11,r0,#0x0
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry, r11]
+			Input Objects: [0x0, r0, CY, 0x1f]
+		===============
+		Assembly Instruction #4, Block #7: bl 0x000163a8
+		Assembly Instruction #3, Block #7: ldr r0,[r10,#-0xc]
+		-----------
+			Result Objects: [r0]
+			Input Objects: [r10, 0xfffffff4]
+		Assembly Instruction #2, Block #7: cpy r1,r5
+		-----------
+			Result Objects: [r1]
+			Input Objects: [r5]
+		Assembly Instruction #1, Block #7: mov r2,#0x2
+		-----------
+			Result Objects: [tmpNG, tmpZR, tmpCY, tmpOV, shift_carry, r2]
+			Input Objects: [0x0, 0x2, CY, OV, 0x1f]
+		===============
+		Assembly Instruction #3, Block #8: bne 0x00082a3c
+		-----------
+			Result Objects: []
+			Input Objects: [ZR]
+		Assembly Instruction #2, Block #8: cmpne r6,r3
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, ZR, CY, r6, r3]
+		Assembly Instruction #1, Block #8: cmn r3,#0x1
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, 0x1, CY, r3, 0x1f]
+		===============
+		Assembly Instruction #5, Block #9: beq 0x00082a24
+		-----------
+			Result Objects: []
+			Input Objects: [ZR]
+		Assembly Instruction #4, Block #9: cmp r3,#0x0
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, CY, r3, 0x1f]
+		Assembly Instruction #3, Block #9: sub r7,r10,#0x10
+		-----------
+			Result Objects: [tmpNG, tmpZR, tmpCY, tmpOV, shift_carry, r7]
+			Input Objects: [0x10, 0x0, CY, r10, 0x1f]
+		Assembly Instruction #2, Block #9: ldr r3,[r10,#-0x10]
+		-----------
+			Result Objects: [r3]
+			Input Objects: [r10, 0xfffffff0]
+		Assembly Instruction #1, Block #9: add r10,r10,#0x10
+		-----------
+			Result Objects: [tmpNG, tmpZR, tmpCY, tmpOV, shift_carry, r10]
+			Input Objects: [0x10, 0x0, CY, r10, 0x1f]
+
+--> NEW PATH CREATED
+		===============
+		Assembly Instruction #2, Block #10: bne 0x00082a3c
+		-----------
+			Result Objects: []
+			Input Objects: [ZR]
+		Assembly Instruction #1, Block #10: subs r11,r0,#0x0
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry, r11]
+			Input Objects: [0x0, r0, CY, 0x1f]
+		===============
+		Assembly Instruction #4, Block #11: bl 0x000163a8
+		Assembly Instruction #3, Block #11: ldr r0,[r10,#-0xc]
+		-----------
+			Result Objects: [r0]
+			Input Objects: [r10, 0xfffffff4]
+		Assembly Instruction #2, Block #11: cpy r1,r5
+		-----------
+			Result Objects: [r1]
+			Input Objects: [r5]
+		Assembly Instruction #1, Block #11: mov r2,#0x2
+		-----------
+			Result Objects: [tmpNG, tmpZR, tmpCY, tmpOV, shift_carry, r2]
+			Input Objects: [0x0, 0x2, CY, OV, 0x1f]
+		===============
+		Assembly Instruction #3, Block #12: bne 0x00082a3c
+		-----------
+			Result Objects: []
+			Input Objects: [ZR]
+		Assembly Instruction #2, Block #12: cmpne r6,r3
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, ZR, CY, r6, r3]
+		Assembly Instruction #1, Block #12: cmn r3,#0x1
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, 0x1, CY, r3, 0x1f]
+		===============
+		Assembly Instruction #5, Block #13: beq 0x00082a24
+		-----------
+			Result Objects: []
+			Input Objects: [ZR]
+		Assembly Instruction #4, Block #13: cmp r3,#0x0
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, CY, r3, 0x1f]
+		Assembly Instruction #3, Block #13: sub r7,r10,#0x10
+		-----------
+			Result Objects: [tmpNG, tmpZR, tmpCY, tmpOV, shift_carry, r7]
+			Input Objects: [0x10, 0x0, CY, r10, 0x1f]
+		Assembly Instruction #2, Block #13: ldr r3,[r10,#-0x10]
+		-----------
+			Result Objects: [r3]
+			Input Objects: [r10, 0xfffffff0]
+		Assembly Instruction #1, Block #13: add r10,r10,#0x10
+		-----------
+			Result Objects: [tmpNG, tmpZR, tmpCY, tmpOV, shift_carry, r10]
+			Input Objects: [0x10, 0x0, CY, r10, 0x1f]
+
+--> NEW PATH CREATED
+		===============
+		Assembly Instruction #2, Block #14: bne 0x00082a3c
+		-----------
+			Result Objects: []
+			Input Objects: [ZR]
+		Assembly Instruction #1, Block #14: subs r11,r0,#0x0
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry, r11]
+			Input Objects: [0x0, r0, CY, 0x1f]
+		===============
+		Assembly Instruction #4, Block #15: bl 0x000163a8
+		===============
+		Assembly Instruction #3, Block #16: bne 0x00082a3c
+
+--> Continuing back to previous path...
+
+--> NEW PATH CREATED
+		===============
+		Assembly Instruction #3, Block #14: cpy r6,r0
+		-----------
+			Result Objects: [r6]
+			Input Objects: [r0]
+		Assembly Instruction #2, Block #14: ldr r10,[r4,r3]
+		-----------
+			Result Objects: [r10]
+			Input Objects: [r4, r3]
+		Assembly Instruction #1, Block #14: ldr r3,[0x82c7c]
+		-----------
+			Result Objects: [r3]
+			Input Objects: [00082c7c]
+		===============
+		Assembly Instruction #1, Block #15: bl 0x00016eb8
+		===============
+		Assembly Instruction #2, Block #16: bgt 0x00082a2c
+
+--> Continuing back to previous path...
+		===============
+		Assembly Instruction #3, Block #14: bne 0x00082a3c
+		-----------
+			Result Objects: []
+			Input Objects: [ZR]
+		Assembly Instruction #2, Block #14: cmpne r6,r3
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, ZR, CY, r6, r3]
+		Assembly Instruction #1, Block #14: cmn r3,#0x1
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, 0x1, CY, r3, 0x1f]
+		===============
+		Assembly Instruction #5, Block #15: beq 0x00082a24
+
+--> NEW PATH CREATED
+		===============
+		Assembly Instruction #2, Block #16: bne 0x00082a3c
+
+--> Continuing back to previous path...
+
+--> NEW PATH CREATED
+		===============
+		Assembly Instruction #3, Block #16: cpy r6,r0
+
+--> Continuing back to previous path...
+		===============
+		Assembly Instruction #3, Block #16: bne 0x00082a3c
+
+--> Continuing back to previous path...
+
+--> NEW PATH CREATED
+		===============
+		Assembly Instruction #3, Block #10: cpy r6,r0
+		-----------
+			Result Objects: [r6]
+			Input Objects: [r0]
+		Assembly Instruction #2, Block #10: ldr r10,[r4,r3]
+		-----------
+			Result Objects: [r10]
+			Input Objects: [r4, r3]
+		Assembly Instruction #1, Block #10: ldr r3,[0x82c7c]
+		-----------
+			Result Objects: [r3]
+			Input Objects: [00082c7c]
+		===============
+		Assembly Instruction #1, Block #11: bl 0x00016eb8
+		===============
+		Assembly Instruction #2, Block #12: bgt 0x00082a2c
+		-----------
+			Result Objects: []
+			Input Objects: [NG, ZR, OV]
+		Assembly Instruction #1, Block #12: cmp r0,#0x0
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, r0, CY, 0x1f]
+		===============
+		Assembly Instruction #6, Block #13: bl 0x00016738
+		Assembly Instruction #5, Block #13: cpy r0,r5
+		-----------
+			Result Objects: [r0]
+			Input Objects: [r5]
+		Assembly Instruction #4, Block #13: cpy r3,r0
+		-----------
+			Result Objects: [r3]
+			Input Objects: [r0]
+		Assembly Instruction #3, Block #13: add r2,pc,r2
+		-----------
+			Result Objects: [tmpNG, tmpZR, tmpCY, tmpOV, shift_carry, r2]
+			Input Objects: [0x0, CY, 0x82a0c, 0x8, r2]
+		Assembly Instruction #2, Block #13: mov r1,#0x7
+		-----------
+			Result Objects: [r1, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, CY, OV, 0x7, 0x1f]
+		Assembly Instruction #1, Block #13: ldr r2,[0x82c78]
+		-----------
+			Result Objects: [r2]
+			Input Objects: [00082c78]
+		===============
+		Assembly Instruction #4, Block #14: bl 0x0007a854
+		Assembly Instruction #3, Block #14: add r0,pc,r0
+		-----------
+			Result Objects: [r0, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [r0, 0x0, CY, 0x829fc, 0x8]
+		Assembly Instruction #2, Block #14: add r5,sp,#0x14
+		-----------
+			Result Objects: [r5, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, CY, 0x14, sp, 0x1f]
+		Assembly Instruction #1, Block #14: ldr r0,[0x82c74]
+		-----------
+			Result Objects: [r0]
+			Input Objects: [00082c74]
+		===============
+		Assembly Instruction #2, Block #15: beq 0x00082a24
+		===============
+		Assembly Instruction #3, Block #16: bl 0x00016204
+
+--> Continuing back to previous path...
+		===============
+		Assembly Instruction #3, Block #10: bne 0x00082a3c
+		-----------
+			Result Objects: []
+			Input Objects: [ZR]
+		Assembly Instruction #2, Block #10: cmpne r6,r3
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, ZR, CY, r6, r3]
+		Assembly Instruction #1, Block #10: cmn r3,#0x1
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, 0x1, CY, r3, 0x1f]
+		===============
+		Assembly Instruction #5, Block #11: beq 0x00082a24
+		-----------
+			Result Objects: []
+			Input Objects: [ZR]
+		Assembly Instruction #4, Block #11: cmp r3,#0x0
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, CY, r3, 0x1f]
+		Assembly Instruction #3, Block #11: sub r7,r10,#0x10
+		-----------
+			Result Objects: [tmpNG, tmpZR, tmpCY, tmpOV, shift_carry, r7]
+			Input Objects: [0x10, 0x0, CY, r10, 0x1f]
+		Assembly Instruction #2, Block #11: ldr r3,[r10,#-0x10]
+		-----------
+			Result Objects: [r3]
+			Input Objects: [r10, 0xfffffff0]
+		Assembly Instruction #1, Block #11: add r10,r10,#0x10
+		-----------
+			Result Objects: [tmpNG, tmpZR, tmpCY, tmpOV, shift_carry, r10]
+			Input Objects: [0x10, 0x0, CY, r10, 0x1f]
+
+--> NEW PATH CREATED
+		===============
+		Assembly Instruction #2, Block #12: bne 0x00082a3c
+		-----------
+			Result Objects: []
+			Input Objects: [ZR]
+		Assembly Instruction #1, Block #12: subs r11,r0,#0x0
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry, r11]
+			Input Objects: [0x0, r0, CY, 0x1f]
+		===============
+		Assembly Instruction #4, Block #13: bl 0x000163a8
+		Assembly Instruction #3, Block #13: ldr r0,[r10,#-0xc]
+		-----------
+			Result Objects: [r0]
+			Input Objects: [r10, 0xfffffff4]
+		Assembly Instruction #2, Block #13: cpy r1,r5
+		-----------
+			Result Objects: [r1]
+			Input Objects: [r5]
+		Assembly Instruction #1, Block #13: mov r2,#0x2
+		-----------
+			Result Objects: [tmpNG, tmpZR, tmpCY, tmpOV, shift_carry, r2]
+			Input Objects: [0x0, 0x2, CY, OV, 0x1f]
+		===============
+		Assembly Instruction #3, Block #14: bne 0x00082a3c
+		-----------
+			Result Objects: []
+			Input Objects: [ZR]
+		Assembly Instruction #2, Block #14: cmpne r6,r3
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, ZR, CY, r6, r3]
+		Assembly Instruction #1, Block #14: cmn r3,#0x1
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, 0x1, CY, r3, 0x1f]
+		===============
+		Assembly Instruction #5, Block #15: beq 0x00082a24
+
+--> NEW PATH CREATED
+		===============
+		Assembly Instruction #2, Block #16: bne 0x00082a3c
+
+--> Continuing back to previous path...
+
+--> NEW PATH CREATED
+		===============
+		Assembly Instruction #3, Block #16: cpy r6,r0
+
+--> Continuing back to previous path...
+		===============
+		Assembly Instruction #3, Block #16: bne 0x00082a3c
+
+--> Continuing back to previous path...
+
+--> NEW PATH CREATED
+		===============
+		Assembly Instruction #3, Block #12: cpy r6,r0
+		-----------
+			Result Objects: [r6]
+			Input Objects: [r0]
+		Assembly Instruction #2, Block #12: ldr r10,[r4,r3]
+		-----------
+			Result Objects: [r10]
+			Input Objects: [r4, r3]
+		Assembly Instruction #1, Block #12: ldr r3,[0x82c7c]
+		-----------
+			Result Objects: [r3]
+			Input Objects: [00082c7c]
+		===============
+		Assembly Instruction #1, Block #13: bl 0x00016eb8
+		===============
+		Assembly Instruction #2, Block #14: bgt 0x00082a2c
+		-----------
+			Result Objects: []
+			Input Objects: [NG, ZR, OV]
+		Assembly Instruction #1, Block #14: cmp r0,#0x0
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, r0, CY, 0x1f]
+		===============
+		Assembly Instruction #6, Block #15: bl 0x00016738
+		===============
+		Assembly Instruction #4, Block #16: bl 0x0007a854
+
+--> Continuing back to previous path...
+		===============
+		Assembly Instruction #3, Block #12: bne 0x00082a3c
+		-----------
+			Result Objects: []
+			Input Objects: [ZR]
+		Assembly Instruction #2, Block #12: cmpne r6,r3
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, ZR, CY, r6, r3]
+		Assembly Instruction #1, Block #12: cmn r3,#0x1
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, 0x1, CY, r3, 0x1f]
+		===============
+		Assembly Instruction #5, Block #13: beq 0x00082a24
+		-----------
+			Result Objects: []
+			Input Objects: [ZR]
+		Assembly Instruction #4, Block #13: cmp r3,#0x0
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, CY, r3, 0x1f]
+		Assembly Instruction #3, Block #13: sub r7,r10,#0x10
+		-----------
+			Result Objects: [tmpNG, tmpZR, tmpCY, tmpOV, shift_carry, r7]
+			Input Objects: [0x10, 0x0, CY, r10, 0x1f]
+		Assembly Instruction #2, Block #13: ldr r3,[r10,#-0x10]
+		-----------
+			Result Objects: [r3]
+			Input Objects: [r10, 0xfffffff0]
+		Assembly Instruction #1, Block #13: add r10,r10,#0x10
+		-----------
+			Result Objects: [tmpNG, tmpZR, tmpCY, tmpOV, shift_carry, r10]
+			Input Objects: [0x10, 0x0, CY, r10, 0x1f]
+
+--> NEW PATH CREATED
+		===============
+		Assembly Instruction #2, Block #14: bne 0x00082a3c
+		-----------
+			Result Objects: []
+			Input Objects: [ZR]
+		Assembly Instruction #1, Block #14: subs r11,r0,#0x0
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry, r11]
+			Input Objects: [0x0, r0, CY, 0x1f]
+		===============
+		Assembly Instruction #4, Block #15: bl 0x000163a8
+		===============
+		Assembly Instruction #3, Block #16: bne 0x00082a3c
+
+--> Continuing back to previous path...
+
+--> NEW PATH CREATED
+		===============
+		Assembly Instruction #3, Block #14: cpy r6,r0
+		-----------
+			Result Objects: [r6]
+			Input Objects: [r0]
+		Assembly Instruction #2, Block #14: ldr r10,[r4,r3]
+		-----------
+			Result Objects: [r10]
+			Input Objects: [r4, r3]
+		Assembly Instruction #1, Block #14: ldr r3,[0x82c7c]
+		-----------
+			Result Objects: [r3]
+			Input Objects: [00082c7c]
+		===============
+		Assembly Instruction #1, Block #15: bl 0x00016eb8
+		===============
+		Assembly Instruction #2, Block #16: bgt 0x00082a2c
+
+--> Continuing back to previous path...
+		===============
+		Assembly Instruction #3, Block #14: bne 0x00082a3c
+		-----------
+			Result Objects: []
+			Input Objects: [ZR]
+		Assembly Instruction #2, Block #14: cmpne r6,r3
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, ZR, CY, r6, r3]
+		Assembly Instruction #1, Block #14: cmn r3,#0x1
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, 0x1, CY, r3, 0x1f]
+		===============
+		Assembly Instruction #5, Block #15: beq 0x00082a24
+
+--> NEW PATH CREATED
+		===============
+		Assembly Instruction #2, Block #16: bne 0x00082a3c
+
+--> Continuing back to previous path...
+
+--> NEW PATH CREATED
+		===============
+		Assembly Instruction #3, Block #16: cpy r6,r0
+
+--> Continuing back to previous path...
+		===============
+		Assembly Instruction #3, Block #16: bne 0x00082a3c
+
+--> Continuing back to previous path...
+
+--> NEW PATH CREATED
+		===============
+		Assembly Instruction #3, Block #6: cpy r6,r0
+		-----------
+			Result Objects: [r6]
+			Input Objects: [r0]
+		Assembly Instruction #2, Block #6: ldr r10,[r4,r3]
+		-----------
+			Result Objects: [r10]
+			Input Objects: [r4, r3]
+		Assembly Instruction #1, Block #6: ldr r3,[0x82c7c]
+		-----------
+			Result Objects: [r3]
+			Input Objects: [00082c7c]
+		===============
+		Assembly Instruction #1, Block #7: bl 0x00016eb8
+		===============
+		Assembly Instruction #2, Block #8: bgt 0x00082a2c
+		-----------
+			Result Objects: []
+			Input Objects: [NG, ZR, OV]
+		Assembly Instruction #1, Block #8: cmp r0,#0x0
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, r0, CY, 0x1f]
+		===============
+		Assembly Instruction #6, Block #9: bl 0x00016738
+		Assembly Instruction #5, Block #9: cpy r0,r5
+		-----------
+			Result Objects: [r0]
+			Input Objects: [r5]
+		Assembly Instruction #4, Block #9: cpy r3,r0
+		-----------
+			Result Objects: [r3]
+			Input Objects: [r0]
+		Assembly Instruction #3, Block #9: add r2,pc,r2
+		-----------
+			Result Objects: [tmpNG, tmpZR, tmpCY, tmpOV, shift_carry, r2]
+			Input Objects: [0x0, CY, 0x82a0c, 0x8, r2]
+		Assembly Instruction #2, Block #9: mov r1,#0x7
+		-----------
+			Result Objects: [r1, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, CY, OV, 0x7, 0x1f]
+		Assembly Instruction #1, Block #9: ldr r2,[0x82c78]
+		-----------
+			Result Objects: [r2]
+			Input Objects: [00082c78]
+		===============
+		Assembly Instruction #4, Block #10: bl 0x0007a854
+		Assembly Instruction #3, Block #10: add r0,pc,r0
+		-----------
+			Result Objects: [r0, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [r0, 0x0, CY, 0x829fc, 0x8]
+		Assembly Instruction #2, Block #10: add r5,sp,#0x14
+		-----------
+			Result Objects: [r5, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, CY, 0x14, sp, 0x1f]
+		Assembly Instruction #1, Block #10: ldr r0,[0x82c74]
+		-----------
+			Result Objects: [r0]
+			Input Objects: [00082c74]
+		===============
+		Assembly Instruction #2, Block #11: beq 0x00082a24
+		-----------
+			Result Objects: []
+			Input Objects: [ZR]
+		Assembly Instruction #1, Block #11: cmp r0,#0x0
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, r0, CY, 0x1f]
+		===============
+		Assembly Instruction #3, Block #12: bl 0x00016204
+		Assembly Instruction #2, Block #12: add r1,pc,r1
+		-----------
+			Result Objects: [r1, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, CY, r1, 0x8, 0x829e4]
+		Assembly Instruction #1, Block #12: ldr r1,[0x82c70]
+		-----------
+			Result Objects: [r1]
+			Input Objects: [00082c70]
+		===============
+		Assembly Instruction #3, Block #13: bl 0x0007a854
+		Assembly Instruction #2, Block #13: add r0,pc,r0
+		-----------
+			Result Objects: [r0, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x829d8, r0, 0x0, CY, 0x8]
+		Assembly Instruction #1, Block #13: ldr r0,[0x82c6c]
+		-----------
+			Result Objects: [r0]
+			Input Objects: [00082c6c]
+		===============
+		Assembly Instruction #2, Block #14: beq 0x00082a24
+		-----------
+			Result Objects: []
+			Input Objects: [ZR]
+		Assembly Instruction #1, Block #14: cmp r0,#0x0
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, r0, CY, 0x1f]
+		===============
+		Assembly Instruction #2, Block #15: bl 0x0001a2d8
+		===============
+		Assembly Instruction #12, Block #16: beq 0x00082a24
+
+--> Continuing back to previous path...
+		===============
+		Assembly Instruction #3, Block #6: bne 0x00082a3c
+		-----------
+			Result Objects: []
+			Input Objects: [ZR]
+		Assembly Instruction #2, Block #6: cmpne r6,r3
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, ZR, CY, r6, r3]
+		Assembly Instruction #1, Block #6: cmn r3,#0x1
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, 0x1, CY, r3, 0x1f]
+		===============
+		Assembly Instruction #5, Block #7: beq 0x00082a24
+		-----------
+			Result Objects: []
+			Input Objects: [ZR]
+		Assembly Instruction #4, Block #7: cmp r3,#0x0
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, CY, r3, 0x1f]
+		Assembly Instruction #3, Block #7: sub r7,r10,#0x10
+		-----------
+			Result Objects: [tmpNG, tmpZR, tmpCY, tmpOV, shift_carry, r7]
+			Input Objects: [0x10, 0x0, CY, r10, 0x1f]
+		Assembly Instruction #2, Block #7: ldr r3,[r10,#-0x10]
+		-----------
+			Result Objects: [r3]
+			Input Objects: [r10, 0xfffffff0]
+		Assembly Instruction #1, Block #7: add r10,r10,#0x10
+		-----------
+			Result Objects: [tmpNG, tmpZR, tmpCY, tmpOV, shift_carry, r10]
+			Input Objects: [0x10, 0x0, CY, r10, 0x1f]
+
+--> NEW PATH CREATED
+		===============
+		Assembly Instruction #2, Block #8: bne 0x00082a3c
+		-----------
+			Result Objects: []
+			Input Objects: [ZR]
+		Assembly Instruction #1, Block #8: subs r11,r0,#0x0
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry, r11]
+			Input Objects: [0x0, r0, CY, 0x1f]
+		===============
+		Assembly Instruction #4, Block #9: bl 0x000163a8
+		Assembly Instruction #3, Block #9: ldr r0,[r10,#-0xc]
+		-----------
+			Result Objects: [r0]
+			Input Objects: [r10, 0xfffffff4]
+		Assembly Instruction #2, Block #9: cpy r1,r5
+		-----------
+			Result Objects: [r1]
+			Input Objects: [r5]
+		Assembly Instruction #1, Block #9: mov r2,#0x2
+		-----------
+			Result Objects: [tmpNG, tmpZR, tmpCY, tmpOV, shift_carry, r2]
+			Input Objects: [0x0, 0x2, CY, OV, 0x1f]
+		===============
+		Assembly Instruction #3, Block #10: bne 0x00082a3c
+		-----------
+			Result Objects: []
+			Input Objects: [ZR]
+		Assembly Instruction #2, Block #10: cmpne r6,r3
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, ZR, CY, r6, r3]
+		Assembly Instruction #1, Block #10: cmn r3,#0x1
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, 0x1, CY, r3, 0x1f]
+		===============
+		Assembly Instruction #5, Block #11: beq 0x00082a24
+		-----------
+			Result Objects: []
+			Input Objects: [ZR]
+		Assembly Instruction #4, Block #11: cmp r3,#0x0
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, CY, r3, 0x1f]
+		Assembly Instruction #3, Block #11: sub r7,r10,#0x10
+		-----------
+			Result Objects: [tmpNG, tmpZR, tmpCY, tmpOV, shift_carry, r7]
+			Input Objects: [0x10, 0x0, CY, r10, 0x1f]
+		Assembly Instruction #2, Block #11: ldr r3,[r10,#-0x10]
+		-----------
+			Result Objects: [r3]
+			Input Objects: [r10, 0xfffffff0]
+		Assembly Instruction #1, Block #11: add r10,r10,#0x10
+		-----------
+			Result Objects: [tmpNG, tmpZR, tmpCY, tmpOV, shift_carry, r10]
+			Input Objects: [0x10, 0x0, CY, r10, 0x1f]
+
+--> NEW PATH CREATED
+		===============
+		Assembly Instruction #2, Block #12: bne 0x00082a3c
+		-----------
+			Result Objects: []
+			Input Objects: [ZR]
+		Assembly Instruction #1, Block #12: subs r11,r0,#0x0
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry, r11]
+			Input Objects: [0x0, r0, CY, 0x1f]
+		===============
+		Assembly Instruction #4, Block #13: bl 0x000163a8
+		Assembly Instruction #3, Block #13: ldr r0,[r10,#-0xc]
+		-----------
+			Result Objects: [r0]
+			Input Objects: [r10, 0xfffffff4]
+		Assembly Instruction #2, Block #13: cpy r1,r5
+		-----------
+			Result Objects: [r1]
+			Input Objects: [r5]
+		Assembly Instruction #1, Block #13: mov r2,#0x2
+		-----------
+			Result Objects: [tmpNG, tmpZR, tmpCY, tmpOV, shift_carry, r2]
+			Input Objects: [0x0, 0x2, CY, OV, 0x1f]
+		===============
+		Assembly Instruction #3, Block #14: bne 0x00082a3c
+		-----------
+			Result Objects: []
+			Input Objects: [ZR]
+		Assembly Instruction #2, Block #14: cmpne r6,r3
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, ZR, CY, r6, r3]
+		Assembly Instruction #1, Block #14: cmn r3,#0x1
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, 0x1, CY, r3, 0x1f]
+		===============
+		Assembly Instruction #5, Block #15: beq 0x00082a24
+
+--> NEW PATH CREATED
+		===============
+		Assembly Instruction #2, Block #16: bne 0x00082a3c
+
+--> Continuing back to previous path...
+
+--> NEW PATH CREATED
+		===============
+		Assembly Instruction #3, Block #16: cpy r6,r0
+
+--> Continuing back to previous path...
+		===============
+		Assembly Instruction #3, Block #16: bne 0x00082a3c
+
+--> Continuing back to previous path...
+
+--> NEW PATH CREATED
+		===============
+		Assembly Instruction #3, Block #12: cpy r6,r0
+		-----------
+			Result Objects: [r6]
+			Input Objects: [r0]
+		Assembly Instruction #2, Block #12: ldr r10,[r4,r3]
+		-----------
+			Result Objects: [r10]
+			Input Objects: [r4, r3]
+		Assembly Instruction #1, Block #12: ldr r3,[0x82c7c]
+		-----------
+			Result Objects: [r3]
+			Input Objects: [00082c7c]
+		===============
+		Assembly Instruction #1, Block #13: bl 0x00016eb8
+		===============
+		Assembly Instruction #2, Block #14: bgt 0x00082a2c
+		-----------
+			Result Objects: []
+			Input Objects: [NG, ZR, OV]
+		Assembly Instruction #1, Block #14: cmp r0,#0x0
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, r0, CY, 0x1f]
+		===============
+		Assembly Instruction #6, Block #15: bl 0x00016738
+		===============
+		Assembly Instruction #4, Block #16: bl 0x0007a854
+
+--> Continuing back to previous path...
+		===============
+		Assembly Instruction #3, Block #12: bne 0x00082a3c
+		-----------
+			Result Objects: []
+			Input Objects: [ZR]
+		Assembly Instruction #2, Block #12: cmpne r6,r3
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, ZR, CY, r6, r3]
+		Assembly Instruction #1, Block #12: cmn r3,#0x1
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, 0x1, CY, r3, 0x1f]
+		===============
+		Assembly Instruction #5, Block #13: beq 0x00082a24
+		-----------
+			Result Objects: []
+			Input Objects: [ZR]
+		Assembly Instruction #4, Block #13: cmp r3,#0x0
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, CY, r3, 0x1f]
+		Assembly Instruction #3, Block #13: sub r7,r10,#0x10
+		-----------
+			Result Objects: [tmpNG, tmpZR, tmpCY, tmpOV, shift_carry, r7]
+			Input Objects: [0x10, 0x0, CY, r10, 0x1f]
+		Assembly Instruction #2, Block #13: ldr r3,[r10,#-0x10]
+		-----------
+			Result Objects: [r3]
+			Input Objects: [r10, 0xfffffff0]
+		Assembly Instruction #1, Block #13: add r10,r10,#0x10
+		-----------
+			Result Objects: [tmpNG, tmpZR, tmpCY, tmpOV, shift_carry, r10]
+			Input Objects: [0x10, 0x0, CY, r10, 0x1f]
+
+--> NEW PATH CREATED
+		===============
+		Assembly Instruction #2, Block #14: bne 0x00082a3c
+		-----------
+			Result Objects: []
+			Input Objects: [ZR]
+		Assembly Instruction #1, Block #14: subs r11,r0,#0x0
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry, r11]
+			Input Objects: [0x0, r0, CY, 0x1f]
+		===============
+		Assembly Instruction #4, Block #15: bl 0x000163a8
+		===============
+		Assembly Instruction #3, Block #16: bne 0x00082a3c
+
+--> Continuing back to previous path...
+
+--> NEW PATH CREATED
+		===============
+		Assembly Instruction #3, Block #14: cpy r6,r0
+		-----------
+			Result Objects: [r6]
+			Input Objects: [r0]
+		Assembly Instruction #2, Block #14: ldr r10,[r4,r3]
+		-----------
+			Result Objects: [r10]
+			Input Objects: [r4, r3]
+		Assembly Instruction #1, Block #14: ldr r3,[0x82c7c]
+		-----------
+			Result Objects: [r3]
+			Input Objects: [00082c7c]
+		===============
+		Assembly Instruction #1, Block #15: bl 0x00016eb8
+		===============
+		Assembly Instruction #2, Block #16: bgt 0x00082a2c
+
+--> Continuing back to previous path...
+		===============
+		Assembly Instruction #3, Block #14: bne 0x00082a3c
+		-----------
+			Result Objects: []
+			Input Objects: [ZR]
+		Assembly Instruction #2, Block #14: cmpne r6,r3
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, ZR, CY, r6, r3]
+		Assembly Instruction #1, Block #14: cmn r3,#0x1
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, 0x1, CY, r3, 0x1f]
+		===============
+		Assembly Instruction #5, Block #15: beq 0x00082a24
+
+--> NEW PATH CREATED
+		===============
+		Assembly Instruction #2, Block #16: bne 0x00082a3c
+
+--> Continuing back to previous path...
+
+--> NEW PATH CREATED
+		===============
+		Assembly Instruction #3, Block #16: cpy r6,r0
+
+--> Continuing back to previous path...
+		===============
+		Assembly Instruction #3, Block #16: bne 0x00082a3c
+
+--> Continuing back to previous path...
+
+--> NEW PATH CREATED
+		===============
+		Assembly Instruction #3, Block #8: cpy r6,r0
+		-----------
+			Result Objects: [r6]
+			Input Objects: [r0]
+		Assembly Instruction #2, Block #8: ldr r10,[r4,r3]
+		-----------
+			Result Objects: [r10]
+			Input Objects: [r4, r3]
+		Assembly Instruction #1, Block #8: ldr r3,[0x82c7c]
+		-----------
+			Result Objects: [r3]
+			Input Objects: [00082c7c]
+		===============
+		Assembly Instruction #1, Block #9: bl 0x00016eb8
+		===============
+		Assembly Instruction #2, Block #10: bgt 0x00082a2c
+		-----------
+			Result Objects: []
+			Input Objects: [NG, ZR, OV]
+		Assembly Instruction #1, Block #10: cmp r0,#0x0
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, r0, CY, 0x1f]
+		===============
+		Assembly Instruction #6, Block #11: bl 0x00016738
+		Assembly Instruction #5, Block #11: cpy r0,r5
+		-----------
+			Result Objects: [r0]
+			Input Objects: [r5]
+		Assembly Instruction #4, Block #11: cpy r3,r0
+		-----------
+			Result Objects: [r3]
+			Input Objects: [r0]
+		Assembly Instruction #3, Block #11: add r2,pc,r2
+		-----------
+			Result Objects: [tmpNG, tmpZR, tmpCY, tmpOV, shift_carry, r2]
+			Input Objects: [0x0, CY, 0x82a0c, 0x8, r2]
+		Assembly Instruction #2, Block #11: mov r1,#0x7
+		-----------
+			Result Objects: [r1, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, CY, OV, 0x7, 0x1f]
+		Assembly Instruction #1, Block #11: ldr r2,[0x82c78]
+		-----------
+			Result Objects: [r2]
+			Input Objects: [00082c78]
+		===============
+		Assembly Instruction #4, Block #12: bl 0x0007a854
+		Assembly Instruction #3, Block #12: add r0,pc,r0
+		-----------
+			Result Objects: [r0, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [r0, 0x0, CY, 0x829fc, 0x8]
+		Assembly Instruction #2, Block #12: add r5,sp,#0x14
+		-----------
+			Result Objects: [r5, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, CY, 0x14, sp, 0x1f]
+		Assembly Instruction #1, Block #12: ldr r0,[0x82c74]
+		-----------
+			Result Objects: [r0]
+			Input Objects: [00082c74]
+		===============
+		Assembly Instruction #2, Block #13: beq 0x00082a24
+		-----------
+			Result Objects: []
+			Input Objects: [ZR]
+		Assembly Instruction #1, Block #13: cmp r0,#0x0
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, r0, CY, 0x1f]
+		===============
+		Assembly Instruction #3, Block #14: bl 0x00016204
+		Assembly Instruction #2, Block #14: add r1,pc,r1
+		-----------
+			Result Objects: [r1, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, CY, r1, 0x8, 0x829e4]
+		Assembly Instruction #1, Block #14: ldr r1,[0x82c70]
+		-----------
+			Result Objects: [r1]
+			Input Objects: [00082c70]
+		===============
+		Assembly Instruction #3, Block #15: bl 0x0007a854
+		===============
+		Assembly Instruction #2, Block #16: beq 0x00082a24
+
+--> Continuing back to previous path...
+		===============
+		Assembly Instruction #3, Block #8: bne 0x00082a3c
+		-----------
+			Result Objects: []
+			Input Objects: [ZR]
+		Assembly Instruction #2, Block #8: cmpne r6,r3
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, ZR, CY, r6, r3]
+		Assembly Instruction #1, Block #8: cmn r3,#0x1
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, 0x1, CY, r3, 0x1f]
+		===============
+		Assembly Instruction #5, Block #9: beq 0x00082a24
+		-----------
+			Result Objects: []
+			Input Objects: [ZR]
+		Assembly Instruction #4, Block #9: cmp r3,#0x0
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, CY, r3, 0x1f]
+		Assembly Instruction #3, Block #9: sub r7,r10,#0x10
+		-----------
+			Result Objects: [tmpNG, tmpZR, tmpCY, tmpOV, shift_carry, r7]
+			Input Objects: [0x10, 0x0, CY, r10, 0x1f]
+		Assembly Instruction #2, Block #9: ldr r3,[r10,#-0x10]
+		-----------
+			Result Objects: [r3]
+			Input Objects: [r10, 0xfffffff0]
+		Assembly Instruction #1, Block #9: add r10,r10,#0x10
+		-----------
+			Result Objects: [tmpNG, tmpZR, tmpCY, tmpOV, shift_carry, r10]
+			Input Objects: [0x10, 0x0, CY, r10, 0x1f]
+
+--> NEW PATH CREATED
+		===============
+		Assembly Instruction #2, Block #10: bne 0x00082a3c
+		-----------
+			Result Objects: []
+			Input Objects: [ZR]
+		Assembly Instruction #1, Block #10: subs r11,r0,#0x0
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry, r11]
+			Input Objects: [0x0, r0, CY, 0x1f]
+		===============
+		Assembly Instruction #4, Block #11: bl 0x000163a8
+		Assembly Instruction #3, Block #11: ldr r0,[r10,#-0xc]
+		-----------
+			Result Objects: [r0]
+			Input Objects: [r10, 0xfffffff4]
+		Assembly Instruction #2, Block #11: cpy r1,r5
+		-----------
+			Result Objects: [r1]
+			Input Objects: [r5]
+		Assembly Instruction #1, Block #11: mov r2,#0x2
+		-----------
+			Result Objects: [tmpNG, tmpZR, tmpCY, tmpOV, shift_carry, r2]
+			Input Objects: [0x0, 0x2, CY, OV, 0x1f]
+		===============
+		Assembly Instruction #3, Block #12: bne 0x00082a3c
+		-----------
+			Result Objects: []
+			Input Objects: [ZR]
+		Assembly Instruction #2, Block #12: cmpne r6,r3
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, ZR, CY, r6, r3]
+		Assembly Instruction #1, Block #12: cmn r3,#0x1
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, 0x1, CY, r3, 0x1f]
+		===============
+		Assembly Instruction #5, Block #13: beq 0x00082a24
+		-----------
+			Result Objects: []
+			Input Objects: [ZR]
+		Assembly Instruction #4, Block #13: cmp r3,#0x0
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, CY, r3, 0x1f]
+		Assembly Instruction #3, Block #13: sub r7,r10,#0x10
+		-----------
+			Result Objects: [tmpNG, tmpZR, tmpCY, tmpOV, shift_carry, r7]
+			Input Objects: [0x10, 0x0, CY, r10, 0x1f]
+		Assembly Instruction #2, Block #13: ldr r3,[r10,#-0x10]
+		-----------
+			Result Objects: [r3]
+			Input Objects: [r10, 0xfffffff0]
+		Assembly Instruction #1, Block #13: add r10,r10,#0x10
+		-----------
+			Result Objects: [tmpNG, tmpZR, tmpCY, tmpOV, shift_carry, r10]
+			Input Objects: [0x10, 0x0, CY, r10, 0x1f]
+
+--> NEW PATH CREATED
+		===============
+		Assembly Instruction #2, Block #14: bne 0x00082a3c
+		-----------
+			Result Objects: []
+			Input Objects: [ZR]
+		Assembly Instruction #1, Block #14: subs r11,r0,#0x0
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry, r11]
+			Input Objects: [0x0, r0, CY, 0x1f]
+		===============
+		Assembly Instruction #4, Block #15: bl 0x000163a8
+		===============
+		Assembly Instruction #3, Block #16: bne 0x00082a3c
+
+--> Continuing back to previous path...
+
+--> NEW PATH CREATED
+		===============
+		Assembly Instruction #3, Block #14: cpy r6,r0
+		-----------
+			Result Objects: [r6]
+			Input Objects: [r0]
+		Assembly Instruction #2, Block #14: ldr r10,[r4,r3]
+		-----------
+			Result Objects: [r10]
+			Input Objects: [r4, r3]
+		Assembly Instruction #1, Block #14: ldr r3,[0x82c7c]
+		-----------
+			Result Objects: [r3]
+			Input Objects: [00082c7c]
+		===============
+		Assembly Instruction #1, Block #15: bl 0x00016eb8
+		===============
+		Assembly Instruction #2, Block #16: bgt 0x00082a2c
+
+--> Continuing back to previous path...
+		===============
+		Assembly Instruction #3, Block #14: bne 0x00082a3c
+		-----------
+			Result Objects: []
+			Input Objects: [ZR]
+		Assembly Instruction #2, Block #14: cmpne r6,r3
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, ZR, CY, r6, r3]
+		Assembly Instruction #1, Block #14: cmn r3,#0x1
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, 0x1, CY, r3, 0x1f]
+		===============
+		Assembly Instruction #5, Block #15: beq 0x00082a24
+
+--> NEW PATH CREATED
+		===============
+		Assembly Instruction #2, Block #16: bne 0x00082a3c
+
+--> Continuing back to previous path...
+
+--> NEW PATH CREATED
+		===============
+		Assembly Instruction #3, Block #16: cpy r6,r0
+
+--> Continuing back to previous path...
+		===============
+		Assembly Instruction #3, Block #16: bne 0x00082a3c
+
+--> Continuing back to previous path...
+
+--> NEW PATH CREATED
+		===============
+		Assembly Instruction #3, Block #10: cpy r6,r0
+		-----------
+			Result Objects: [r6]
+			Input Objects: [r0]
+		Assembly Instruction #2, Block #10: ldr r10,[r4,r3]
+		-----------
+			Result Objects: [r10]
+			Input Objects: [r4, r3]
+		Assembly Instruction #1, Block #10: ldr r3,[0x82c7c]
+		-----------
+			Result Objects: [r3]
+			Input Objects: [00082c7c]
+		===============
+		Assembly Instruction #1, Block #11: bl 0x00016eb8
+		===============
+		Assembly Instruction #2, Block #12: bgt 0x00082a2c
+		-----------
+			Result Objects: []
+			Input Objects: [NG, ZR, OV]
+		Assembly Instruction #1, Block #12: cmp r0,#0x0
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, r0, CY, 0x1f]
+		===============
+		Assembly Instruction #6, Block #13: bl 0x00016738
+		Assembly Instruction #5, Block #13: cpy r0,r5
+		-----------
+			Result Objects: [r0]
+			Input Objects: [r5]
+		Assembly Instruction #4, Block #13: cpy r3,r0
+		-----------
+			Result Objects: [r3]
+			Input Objects: [r0]
+		Assembly Instruction #3, Block #13: add r2,pc,r2
+		-----------
+			Result Objects: [tmpNG, tmpZR, tmpCY, tmpOV, shift_carry, r2]
+			Input Objects: [0x0, CY, 0x82a0c, 0x8, r2]
+		Assembly Instruction #2, Block #13: mov r1,#0x7
+		-----------
+			Result Objects: [r1, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, CY, OV, 0x7, 0x1f]
+		Assembly Instruction #1, Block #13: ldr r2,[0x82c78]
+		-----------
+			Result Objects: [r2]
+			Input Objects: [00082c78]
+		===============
+		Assembly Instruction #4, Block #14: bl 0x0007a854
+		Assembly Instruction #3, Block #14: add r0,pc,r0
+		-----------
+			Result Objects: [r0, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [r0, 0x0, CY, 0x829fc, 0x8]
+		Assembly Instruction #2, Block #14: add r5,sp,#0x14
+		-----------
+			Result Objects: [r5, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, CY, 0x14, sp, 0x1f]
+		Assembly Instruction #1, Block #14: ldr r0,[0x82c74]
+		-----------
+			Result Objects: [r0]
+			Input Objects: [00082c74]
+		===============
+		Assembly Instruction #2, Block #15: beq 0x00082a24
+		===============
+		Assembly Instruction #3, Block #16: bl 0x00016204
+
+--> Continuing back to previous path...
+		===============
+		Assembly Instruction #3, Block #10: bne 0x00082a3c
+		-----------
+			Result Objects: []
+			Input Objects: [ZR]
+		Assembly Instruction #2, Block #10: cmpne r6,r3
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, ZR, CY, r6, r3]
+		Assembly Instruction #1, Block #10: cmn r3,#0x1
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, 0x1, CY, r3, 0x1f]
+		===============
+		Assembly Instruction #5, Block #11: beq 0x00082a24
+		-----------
+			Result Objects: []
+			Input Objects: [ZR]
+		Assembly Instruction #4, Block #11: cmp r3,#0x0
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, CY, r3, 0x1f]
+		Assembly Instruction #3, Block #11: sub r7,r10,#0x10
+		-----------
+			Result Objects: [tmpNG, tmpZR, tmpCY, tmpOV, shift_carry, r7]
+			Input Objects: [0x10, 0x0, CY, r10, 0x1f]
+		Assembly Instruction #2, Block #11: ldr r3,[r10,#-0x10]
+		-----------
+			Result Objects: [r3]
+			Input Objects: [r10, 0xfffffff0]
+		Assembly Instruction #1, Block #11: add r10,r10,#0x10
+		-----------
+			Result Objects: [tmpNG, tmpZR, tmpCY, tmpOV, shift_carry, r10]
+			Input Objects: [0x10, 0x0, CY, r10, 0x1f]
+
+--> NEW PATH CREATED
+		===============
+		Assembly Instruction #2, Block #12: bne 0x00082a3c
+		-----------
+			Result Objects: []
+			Input Objects: [ZR]
+		Assembly Instruction #1, Block #12: subs r11,r0,#0x0
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry, r11]
+			Input Objects: [0x0, r0, CY, 0x1f]
+		===============
+		Assembly Instruction #4, Block #13: bl 0x000163a8
+		Assembly Instruction #3, Block #13: ldr r0,[r10,#-0xc]
+		-----------
+			Result Objects: [r0]
+			Input Objects: [r10, 0xfffffff4]
+		Assembly Instruction #2, Block #13: cpy r1,r5
+		-----------
+			Result Objects: [r1]
+			Input Objects: [r5]
+		Assembly Instruction #1, Block #13: mov r2,#0x2
+		-----------
+			Result Objects: [tmpNG, tmpZR, tmpCY, tmpOV, shift_carry, r2]
+			Input Objects: [0x0, 0x2, CY, OV, 0x1f]
+		===============
+		Assembly Instruction #3, Block #14: bne 0x00082a3c
+		-----------
+			Result Objects: []
+			Input Objects: [ZR]
+		Assembly Instruction #2, Block #14: cmpne r6,r3
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, ZR, CY, r6, r3]
+		Assembly Instruction #1, Block #14: cmn r3,#0x1
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, 0x1, CY, r3, 0x1f]
+		===============
+		Assembly Instruction #5, Block #15: beq 0x00082a24
+
+--> NEW PATH CREATED
+		===============
+		Assembly Instruction #2, Block #16: bne 0x00082a3c
+
+--> Continuing back to previous path...
+
+--> NEW PATH CREATED
+		===============
+		Assembly Instruction #3, Block #16: cpy r6,r0
+
+--> Continuing back to previous path...
+		===============
+		Assembly Instruction #3, Block #16: bne 0x00082a3c
+
+--> Continuing back to previous path...
+
+--> NEW PATH CREATED
+		===============
+		Assembly Instruction #3, Block #12: cpy r6,r0
+		-----------
+			Result Objects: [r6]
+			Input Objects: [r0]
+		Assembly Instruction #2, Block #12: ldr r10,[r4,r3]
+		-----------
+			Result Objects: [r10]
+			Input Objects: [r4, r3]
+		Assembly Instruction #1, Block #12: ldr r3,[0x82c7c]
+		-----------
+			Result Objects: [r3]
+			Input Objects: [00082c7c]
+		===============
+		Assembly Instruction #1, Block #13: bl 0x00016eb8
+		===============
+		Assembly Instruction #2, Block #14: bgt 0x00082a2c
+		-----------
+			Result Objects: []
+			Input Objects: [NG, ZR, OV]
+		Assembly Instruction #1, Block #14: cmp r0,#0x0
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, r0, CY, 0x1f]
+		===============
+		Assembly Instruction #6, Block #15: bl 0x00016738
+		===============
+		Assembly Instruction #4, Block #16: bl 0x0007a854
+
+--> Continuing back to previous path...
+		===============
+		Assembly Instruction #3, Block #12: bne 0x00082a3c
+		-----------
+			Result Objects: []
+			Input Objects: [ZR]
+		Assembly Instruction #2, Block #12: cmpne r6,r3
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, ZR, CY, r6, r3]
+		Assembly Instruction #1, Block #12: cmn r3,#0x1
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, 0x1, CY, r3, 0x1f]
+		===============
+		Assembly Instruction #5, Block #13: beq 0x00082a24
+		-----------
+			Result Objects: []
+			Input Objects: [ZR]
+		Assembly Instruction #4, Block #13: cmp r3,#0x0
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, CY, r3, 0x1f]
+		Assembly Instruction #3, Block #13: sub r7,r10,#0x10
+		-----------
+			Result Objects: [tmpNG, tmpZR, tmpCY, tmpOV, shift_carry, r7]
+			Input Objects: [0x10, 0x0, CY, r10, 0x1f]
+		Assembly Instruction #2, Block #13: ldr r3,[r10,#-0x10]
+		-----------
+			Result Objects: [r3]
+			Input Objects: [r10, 0xfffffff0]
+		Assembly Instruction #1, Block #13: add r10,r10,#0x10
+		-----------
+			Result Objects: [tmpNG, tmpZR, tmpCY, tmpOV, shift_carry, r10]
+			Input Objects: [0x10, 0x0, CY, r10, 0x1f]
+
+--> NEW PATH CREATED
+		===============
+		Assembly Instruction #2, Block #14: bne 0x00082a3c
+		-----------
+			Result Objects: []
+			Input Objects: [ZR]
+		Assembly Instruction #1, Block #14: subs r11,r0,#0x0
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry, r11]
+			Input Objects: [0x0, r0, CY, 0x1f]
+		===============
+		Assembly Instruction #4, Block #15: bl 0x000163a8
+		===============
+		Assembly Instruction #3, Block #16: bne 0x00082a3c
+
+--> Continuing back to previous path...
+
+--> NEW PATH CREATED
+		===============
+		Assembly Instruction #3, Block #14: cpy r6,r0
+		-----------
+			Result Objects: [r6]
+			Input Objects: [r0]
+		Assembly Instruction #2, Block #14: ldr r10,[r4,r3]
+		-----------
+			Result Objects: [r10]
+			Input Objects: [r4, r3]
+		Assembly Instruction #1, Block #14: ldr r3,[0x82c7c]
+		-----------
+			Result Objects: [r3]
+			Input Objects: [00082c7c]
+		===============
+		Assembly Instruction #1, Block #15: bl 0x00016eb8
+		===============
+		Assembly Instruction #2, Block #16: bgt 0x00082a2c
+
+--> Continuing back to previous path...
+		===============
+		Assembly Instruction #3, Block #14: bne 0x00082a3c
+		-----------
+			Result Objects: []
+			Input Objects: [ZR]
+		Assembly Instruction #2, Block #14: cmpne r6,r3
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, ZR, CY, r6, r3]
+		Assembly Instruction #1, Block #14: cmn r3,#0x1
+		-----------
+			Result Objects: [NG, ZR, CY, OV, tmpNG, tmpZR, tmpCY, tmpOV, shift_carry]
+			Input Objects: [0x0, 0x1, CY, r3, 0x1f]
+		===============
+		Assembly Instruction #5, Block #15: beq 0x00082a24
+
+--> NEW PATH CREATED
+		===============
+		Assembly Instruction #2, Block #16: bne 0x00082a3c
+
+--> Continuing back to previous path...
+
+--> NEW PATH CREATED
+		===============
+		Assembly Instruction #3, Block #16: cpy r6,r0
+
+--> Continuing back to previous path...
+		===============
+		Assembly Instruction #3, Block #16: bne 0x00082a3c
+	============================
+
+#########################################################################
+
+Taint for Sink (system @ 0x001052c0) called/referenced @ 0x00082a40
+
+	############################
+	Nodes:
+		(register, 0x20, 4)
+	
+	Memory Positions:
+	############################
+
+	Path #0
+	############################
+	Nodes:
+	
+	Memory Positions:
+	############################
+
+	Path #1
+		Function: FUN_00082994 @ 00082994  -->  Depth Level #2
+			0x00082a68   strncmp
+		
+	############################
+	Nodes:
+	
+	Memory Positions:
+	############################
+
+	Path #2
+		Function: FUN_00082994 @ 00082994  -->  Depth Level #2
+			0x00082a68   strncmp
+		
+	############################
+	Nodes:
+	
+	Memory Positions:
+	############################
+
+	Path #3
+		Function: FUN_00082994 @ 00082994  -->  Depth Level #2
+			0x00082a68   strncmp
+		
+	############################
+	Nodes:
+	
+	Memory Positions:
+	############################
+
+	Path #4
+		Function: FUN_00082994 @ 00082994  -->  Depth Level #2
+			0x00082a68   strncmp
+		
+	############################
+	Nodes:
+	
+	Memory Positions:
+	############################
+
+	Path #5
+		Function: FUN_00082994 @ 00082994  -->  Depth Level #2
+			0x00082a68   strncmp
+		
+	############################
+	Nodes:
+	
+	Memory Positions:
+	############################
+
+	Path #6
+		Function: FUN_00082994 @ 00082994  -->  Depth Level #2
+			0x00082a68   strncmp
+		
+	############################
+	Nodes:
+	
+	Memory Positions:
+	############################
+
+	Path #7
+		Function: FUN_00082994 @ 00082994  -->  Depth Level #2
+			0x00082a68   strncmp
+		
+	############################
+	Nodes:
+	
+	Memory Positions:
+	############################
+
+	Path #8
+		Function: FUN_00082994 @ 00082994  -->  Depth Level #2
+			0x00082a68   strncmp
+		
+	############################
+	Nodes:
+	
+	Memory Positions:
+	############################
+
+	Path #9
+		Function: FUN_00082994 @ 00082994  -->  Depth Level #2
+			0x00082a68   strncmp
+		
+	############################
+	Nodes:
+	
+	Memory Positions:
+	############################
+
+	Path #10
+		Function: FUN_00082994 @ 00082994  -->  Depth Level #2
+			0x00082a68   strncmp
+		
+	############################
+	Nodes:
+	
+	Memory Positions:
+	############################
+
+	Path #11
+		Function: FUN_00082994 @ 00082994  -->  Depth Level #2
+			0x00082a68   strncmp
+		
+	############################
+	Nodes:
+	
+	Memory Positions:
+	############################
+
+	Path #12
+		Function: FUN_00082994 @ 00082994  -->  Depth Level #2
+			0x00082a68   strncmp
+		
+	############################
+	Nodes:
+	
+	Memory Positions:
+	############################
+
+	Path #13
+		Function: FUN_00082994 @ 00082994  -->  Depth Level #2
+			0x00082a68   strncmp
+		
+	############################
+	Nodes:
+	
+	Memory Positions:
+	############################
+
+	Path #14
+		Function: FUN_00082994 @ 00082994  -->  Depth Level #2
+			0x00082a68   strncmp
+		
+	############################
+	Nodes:
+	
+	Memory Positions:
+	############################
+
+	Path #15
+		Function: FUN_00082994 @ 00082994  -->  Depth Level #2
+			0x00082a68   strncmp
+		
+	############################
+	Nodes:
+	
+	Memory Positions:
+	############################
+
+	Path #16
+		Function: FUN_00082994 @ 00082994  -->  Depth Level #2
+			0x00082a68   strncmp
+		
+	############################
+	Nodes:
+	
+	Memory Positions:
+	############################
+
+	Path #17
+		Function: FUN_00082994 @ 00082994  -->  Depth Level #2
+			0x00082a68   strncmp
+		
+	############################
+	Nodes:
+	
+	Memory Positions:
+	############################
+
+	Path #18
+		Function: FUN_00082994 @ 00082994  -->  Depth Level #2
+			0x00082a68   strncmp
+		
+	############################
+	Nodes:
+	
+	Memory Positions:
+	############################
+
+	Path #19
+		Function: FUN_00082994 @ 00082994  -->  Depth Level #2
+			0x00082a68   strncmp
+		
+	############################
+	Nodes:
+	
+	Memory Positions:
+	############################
+
+	Path #20
+		Function: FUN_00082994 @ 00082994  -->  Depth Level #2
+			0x00082a68   strncmp
+		
+	############################
+	Nodes:
+	
+	Memory Positions:
+	############################
+
+	Path #21
+		Function: FUN_00082994 @ 00082994  -->  Depth Level #2
+			0x00082a68   strncmp
+		
+	############################
+	Nodes:
+	
+	Memory Positions:
+	############################
+
+	Path #22
+		Function: FUN_00082994 @ 00082994  -->  Depth Level #2
+			0x00082a68   strncmp
+		
+	############################
+	Nodes:
+	
+	Memory Positions:
+	############################
+
+	Path #23
+		Function: FUN_00082994 @ 00082994  -->  Depth Level #2
+			0x00082a68   strncmp
+		
+	############################
+	Nodes:
+	
+	Memory Positions:
+	############################
+
+	Path #24
+		Function: FUN_00082994 @ 00082994  -->  Depth Level #2
+			0x00082a68   strncmp
+		
+	############################
+	Nodes:
+	
+	Memory Positions:
+	############################
+
+	Path #25
+		Function: FUN_00082994 @ 00082994  -->  Depth Level #2
+			0x00082a68   strncmp
+		
+	############################
+	Nodes:
+	
+	Memory Positions:
+	############################
+
+	Path #26
+		Function: FUN_00082994 @ 00082994  -->  Depth Level #2
+			0x00082a68   strncmp
+		
+	############################
+	Nodes:
+	
+	Memory Positions:
+	############################
+
+	Path #27
+		Function: FUN_00082994 @ 00082994  -->  Depth Level #2
+			0x00082a68   strncmp
+		
+	############################
+	Nodes:
+	
+	Memory Positions:
+	############################
+
+	Path #28
+		Function: FUN_00082994 @ 00082994  -->  Depth Level #2
+			0x00082a68   strncmp
+		
+	############################
+	Nodes:
+	
+	Memory Positions:
+	############################
+
+	Path #29
+		Function: FUN_00082994 @ 00082994  -->  Depth Level #2
+			0x00082a68   strncmp
+		
+	############################
+	Nodes:
+	
+	Memory Positions:
+	############################
+
+	Path #30
+		Function: FUN_00082994 @ 00082994  -->  Depth Level #2
+			0x00082a68   strncmp
+		
+	############################
+	Nodes:
+	
+	Memory Positions:
+	############################
+
+	Path #31
+		Function: FUN_00082994 @ 00082994  -->  Depth Level #2
+			0x00082a68   strncmp
+		
+	############################
+	Nodes:
+	
+	Memory Positions:
+	############################
+
+	Path #32
+		Function: FUN_00082994 @ 00082994  -->  Depth Level #2
+			0x00082a68   strncmp
+		
+	############################
+	Nodes:
+	
+	Memory Positions:
+	############################
+
+	Path #33
+		Function: FUN_00082994 @ 00082994  -->  Depth Level #2
+			0x00082a68   strncmp
+		
+	############################
+	Nodes:
+	
+	Memory Positions:
+	############################
+
+	Path #34
+		Function: FUN_00082994 @ 00082994  -->  Depth Level #2
+			0x00082a68   strncmp
+		
+	############################
+	Nodes:
+	
+	Memory Positions:
+	############################
+
+	Path #35
+		Function: FUN_00082994 @ 00082994  -->  Depth Level #2
+			0x00082a68   strncmp
+		
+	############################
+	Nodes:
+	
+	Memory Positions:
+	############################
+
+	Path #36
+		Function: FUN_00082994 @ 00082994  -->  Depth Level #2
+			0x00082a68   strncmp
+		
+	############################
+	Nodes:
+	
+	Memory Positions:
+	############################
+
+	Path #37
+		Function: FUN_00082994 @ 00082994  -->  Depth Level #2
+			0x00082a68   strncmp
+		
+	############################
+	Nodes:
+	
+	Memory Positions:
+	############################
+
+	Path #38
+		Function: FUN_00082994 @ 00082994  -->  Depth Level #2
+			0x00082a68   strncmp
+		
+	############################
+	Nodes:
+	
+	Memory Positions:
+	############################
+
+	Path #39
+		Function: FUN_00082994 @ 00082994  -->  Depth Level #2
+			0x00082a68   strncmp
+		
+	############################
+	Nodes:
+	
+	Memory Positions:
+	############################
+
+	Path #40
+		Function: FUN_00082994 @ 00082994  -->  Depth Level #2
+			0x00082a68   strncmp
+		
+	############################
+	Nodes:
+	
+	Memory Positions:
+	############################
+
+	Path #41
+		Function: FUN_00082994 @ 00082994  -->  Depth Level #2
+			0x00082a68   strncmp
+		
+	############################
+	Nodes:
+	
+	Memory Positions:
+	############################
+
+	Path #42
+		Function: FUN_00082994 @ 00082994  -->  Depth Level #2
+			0x00082a2c   get_model
+		
+	############################
+	Nodes:
+	
+	Memory Positions:
+	############################
+
+	Path #43
+		Function: FUN_00082994 @ 00082994  -->  Depth Level #4
+			0x00082a68   strncmp
+		
+	############################
+	Nodes:
+	
+	Memory Positions:
+	############################
+
+	Path #44
+		Function: FUN_00082994 @ 00082994  -->  Depth Level #4
+			0x00082a68   strncmp
+		
+	############################
+	Nodes:
+	
+	Memory Positions:
+	############################
+
+	Path #45
+		Function: FUN_00082994 @ 00082994  -->  Depth Level #4
+			0x00082a68   strncmp
+		
+	############################
+	Nodes:
+	
+	Memory Positions:
+	############################
+
+	Path #46
+		Function: FUN_00082994 @ 00082994  -->  Depth Level #4
+			0x00082a68   strncmp
+		
+	############################
+	Nodes:
+	
+	Memory Positions:
+	############################
+
+	Path #47
+		Function: FUN_00082994 @ 00082994  -->  Depth Level #4
+			0x00082a68   strncmp
+		
+	############################
+	Nodes:
+	
+	Memory Positions:
+	############################
+
+	Path #48
+		Function: FUN_00082994 @ 00082994  -->  Depth Level #4
+			0x00082a68   strncmp
+		
+	############################
+	Nodes:
+	
+	Memory Positions:
+	############################
+
+	Path #49
+		Function: FUN_00082994 @ 00082994  -->  Depth Level #4
+			0x00082a68   strncmp
+		
+	############################
+	Nodes:
+	
+	Memory Positions:
+	############################
+
+	Path #50
+		Function: FUN_00082994 @ 00082994  -->  Depth Level #4
+			0x00082a68   strncmp
+		
+	############################
+	Nodes:
+	
+	Memory Positions:
+	############################
+
+	Path #51
+		Function: FUN_00082994 @ 00082994  -->  Depth Level #4
+			0x00082a68   strncmp
+		
+	############################
+	Nodes:
+	
+	Memory Positions:
+	############################
+
+	Path #52
+		Function: FUN_00082994 @ 00082994  -->  Depth Level #4
+			0x00082a68   strncmp
+		
+	############################
+	Nodes:
+	
+	Memory Positions:
+	############################
+
+	Path #53
+		Function: FUN_00082994 @ 00082994  -->  Depth Level #4
+			0x00082a68   strncmp
+		
+	############################
+	Nodes:
+	
+	Memory Positions:
+	############################
+
+	Path #54
+		Function: FUN_00082994 @ 00082994  -->  Depth Level #4
+			0x00082a68   strncmp
+		
+	############################
+	Nodes:
+	
+	Memory Positions:
+	############################
+
+	Path #55
+		Function: FUN_00082994 @ 00082994  -->  Depth Level #4
+			0x00082a68   strncmp
+		
+	############################
+	Nodes:
+	
+	Memory Positions:
+	############################
+
+	Path #56
+		Function: FUN_00082994 @ 00082994  -->  Depth Level #4
+			0x00082a68   strncmp
+		
+	############################
+	Nodes:
+	
+	Memory Positions:
+	############################
+
+	Path #57
+		Function: FUN_00082994 @ 00082994  -->  Depth Level #4
+			0x00082a68   strncmp
+		
+	############################
+	Nodes:
+	
+	Memory Positions:
+	############################
+
+	Path #58
+		Function: FUN_00082994 @ 00082994  -->  Depth Level #4
+			0x00082a68   strncmp
+		
+	############################
+	Nodes:
+	
+	Memory Positions:
+	############################
+
+	Path #59
+		Function: FUN_00082994 @ 00082994  -->  Depth Level #4
+			0x00082a68   strncmp
+		
+	############################
+	Nodes:
+	
+	Memory Positions:
+	############################
+
+	Path #60
+		Function: FUN_00082994 @ 00082994  -->  Depth Level #4
+			0x00082a68   strncmp
+		
+	############################
+	Nodes:
+	
+	Memory Positions:
+	############################
+
+	Path #61
+		Function: FUN_00082994 @ 00082994  -->  Depth Level #4
+			0x00082a68   strncmp
+		
+	############################
+	Nodes:
+	
+	Memory Positions:
+	############################
+
+	Path #62
+		Function: FUN_00082994 @ 00082994  -->  Depth Level #4
+			0x00082a68   strncmp
+		
+	############################
+	Nodes:
+	
+	Memory Positions:
+	############################
+
+	Path #63
+		Function: FUN_00082994 @ 00082994  -->  Depth Level #4
+			0x00082a68   strncmp
+		
+	############################
+	Nodes:
+	
+	Memory Positions:
+	############################
+
+	Path #64
+		Function: FUN_00082994 @ 00082994  -->  Depth Level #4
+			0x00082a68   strncmp
+		
+	############################
+	Nodes:
+	
+	Memory Positions:
+	############################
+
+	Path #65
+		Function: FUN_00082994 @ 00082994  -->  Depth Level #4
+			0x00082a68   strncmp
+		
+	############################
+	Nodes:
+	
+	Memory Positions:
+	############################
+
+	Path #66
+		Function: FUN_00082994 @ 00082994  -->  Depth Level #4
+			0x00082a68   strncmp
+		
+	############################
+	Nodes:
+	
+	Memory Positions:
+	############################
+
+	Path #67
+		Function: FUN_00082994 @ 00082994  -->  Depth Level #4
+			0x00082a68   strncmp
+		
+	############################
+	Nodes:
+	
+	Memory Positions:
+	############################
+
+	Path #68
+		Function: FUN_00082994 @ 00082994  -->  Depth Level #4
+			0x00082a2c   get_model
+		
+	############################
+	Nodes:
+	
+	Memory Positions:
+	############################
+
+	Path #69
+		Function: FUN_00082994 @ 00082994  -->  Depth Level #6
+			0x00082a68   strncmp
+		
+	############################
+	Nodes:
+	
+	Memory Positions:
+	############################
+
+	Path #70
+		Function: FUN_00082994 @ 00082994  -->  Depth Level #6
+			0x00082a68   strncmp
+		
+	############################
+	Nodes:
+	
+	Memory Positions:
+	############################
+
+	Path #71
+		Function: FUN_00082994 @ 00082994  -->  Depth Level #6
+			0x00082a68   strncmp
+		
+	############################
+	Nodes:
+	
+	Memory Positions:
+	############################
+
+	Path #72
+		Function: FUN_00082994 @ 00082994  -->  Depth Level #6
+			0x00082a68   strncmp
+		
+	############################
+	Nodes:
+	
+	Memory Positions:
+	############################
+
+	Path #73
+		Function: FUN_00082994 @ 00082994  -->  Depth Level #6
+			0x00082a68   strncmp
+		
+	############################
+	Nodes:
+	
+	Memory Positions:
+	############################
+
+	Path #74
+		Function: FUN_00082994 @ 00082994  -->  Depth Level #6
+			0x00082a68   strncmp
+		
+	############################
+	Nodes:
+	
+	Memory Positions:
+	############################
+
+	Path #75
+		Function: FUN_00082994 @ 00082994  -->  Depth Level #6
+			0x00082a68   strncmp
+		
+	############################
+	Nodes:
+	
+	Memory Positions:
+	############################
+
+	Path #76
+		Function: FUN_00082994 @ 00082994  -->  Depth Level #6
+			0x00082a68   strncmp
+		
+	############################
+	Nodes:
+	
+	Memory Positions:
+	############################
+
+	Path #77
+		Function: FUN_00082994 @ 00082994  -->  Depth Level #6
+			0x00082a68   strncmp
+		
+	############################
+	Nodes:
+	
+	Memory Positions:
+	############################
+
+	Path #78
+		Function: FUN_00082994 @ 00082994  -->  Depth Level #6
+			0x00082a68   strncmp
+		
+	############################
+	Nodes:
+	
+	Memory Positions:
+	############################
+
+	Path #79
+		Function: FUN_00082994 @ 00082994  -->  Depth Level #6
+			0x00082a68   strncmp
+		
+	############################
+	Nodes:
+	
+	Memory Positions:
+	############################
+
+	Path #80
+		Function: FUN_00082994 @ 00082994  -->  Depth Level #6
+			0x00082a68   strncmp
+		
+	############################
+	Nodes:
+	
+	Memory Positions:
+	############################
+
+	Path #81
+		Function: FUN_00082994 @ 00082994  -->  Depth Level #6
+			0x00082a68   strncmp
+		
+	############################
+	Nodes:
+	
+	Memory Positions:
+	############################
+
+	Path #82
+		Function: FUN_00082994 @ 00082994  -->  Depth Level #6
+			0x00082a68   strncmp
+		
+	############################
+	Nodes:
+	
+	Memory Positions:
+	############################
+
+	Path #83
+		Function: FUN_00082994 @ 00082994  -->  Depth Level #6
+			0x00082a68   strncmp
+		
+	############################
+	Nodes:
+	
+	Memory Positions:
+	############################
+
+	Path #84
+		Function: FUN_00082994 @ 00082994  -->  Depth Level #6
+			0x00082a2c   get_model
+		
+	############################
+	Nodes:
+	
+	Memory Positions:
+	############################
+
+	Path #85
+		Function: FUN_00082994 @ 00082994  -->  Depth Level #8
+			0x00082a68   strncmp
+		
+	############################
+	Nodes:
+	
+	Memory Positions:
+	############################
+
+	Path #86
+		Function: FUN_00082994 @ 00082994  -->  Depth Level #8
+			0x00082a68   strncmp
+		
+	############################
+	Nodes:
+	
+	Memory Positions:
+	############################
+
+	Path #87
+		Function: FUN_00082994 @ 00082994  -->  Depth Level #8
+			0x00082a68   strncmp
+		
+	############################
+	Nodes:
+	
+	Memory Positions:
+	############################
+
+	Path #88
+		Function: FUN_00082994 @ 00082994  -->  Depth Level #8
+			0x00082a68   strncmp
+		
+	############################
+	Nodes:
+	
+	Memory Positions:
+	############################
+
+	Path #89
+		Function: FUN_00082994 @ 00082994  -->  Depth Level #8
+			0x00082a68   strncmp
+		
+	############################
+	Nodes:
+	
+	Memory Positions:
+	############################
+
+	Path #90
+		Function: FUN_00082994 @ 00082994  -->  Depth Level #8
+			0x00082a68   strncmp
+		
+	############################
+	Nodes:
+	
+	Memory Positions:
+	############################
+
+	Path #91
+		Function: FUN_00082994 @ 00082994  -->  Depth Level #8
+			0x00082a68   strncmp
+		
+	############################
+	Nodes:
+	
+	Memory Positions:
+	############################
+
+	Path #92
+		Function: FUN_00082994 @ 00082994  -->  Depth Level #8
+			0x00082a68   strncmp
+		
+	############################
+	Nodes:
+	
+	Memory Positions:
+	############################
+
+	Path #93
+		Function: FUN_00082994 @ 00082994  -->  Depth Level #8
+			0x00082a68   strncmp
+		
+	############################
+	Nodes:
+	
+	Memory Positions:
+	############################
+
+	Path #94
+		Function: FUN_00082994 @ 00082994  -->  Depth Level #8
+			0x00082a2c   get_model
+		
+	############################
+	Nodes:
+	
+	Memory Positions:
+	############################
+
+	Path #95
+		Function: FUN_00082994 @ 00082994  -->  Depth Level #10
+			0x00082a68   strncmp
+		
+	############################
+	Nodes:
+	
+	Memory Positions:
+	############################
+
+	Path #96
+		Function: FUN_00082994 @ 00082994  -->  Depth Level #10
+			0x00082a68   strncmp
+		
+	############################
+	Nodes:
+	
+	Memory Positions:
+	############################
+
+	Path #97
+		Function: FUN_00082994 @ 00082994  -->  Depth Level #10
+			0x00082a68   strncmp
+		
+	############################
+	Nodes:
+	
+	Memory Positions:
+	############################
+
+	Path #98
+		Function: FUN_00082994 @ 00082994  -->  Depth Level #10
+			0x00082a68   strncmp
+		
+	############################
+	Nodes:
+	
+	Memory Positions:
+	############################
+
+	Path #99
+		Function: FUN_00082994 @ 00082994  -->  Depth Level #10
+			0x00082a68   strncmp
+		
+	############################
+	Nodes:
+	
+	Memory Positions:
+	############################
+
+	Path #100
+		Function: FUN_00082994 @ 00082994  -->  Depth Level #10
+			0x00082a2c   get_model
+		
+	############################
+	Nodes:
+	
+	Memory Positions:
+	############################
+
+	Path #101
+		Function: FUN_00082994 @ 00082994  -->  Depth Level #12
+			0x00082a68   strncmp
+		
+	############################
+	Nodes:
+	
+	Memory Positions:
+	############################
+
+	Path #102
+		Function: FUN_00082994 @ 00082994  -->  Depth Level #12
+			0x00082a68   strncmp
+		
+	############################
+	Nodes:
+	
+	Memory Positions:
+	############################
+
+	Path #103
+		Function: FUN_00082994 @ 00082994  -->  Depth Level #12
+			0x00082a68   strncmp
+		
+	############################
+	Nodes:
+	
+	Memory Positions:
+	############################
+
+	Path #104
+		Function: FUN_00082994 @ 00082994  -->  Depth Level #12
+			0x00082a2c   get_model
+		
+	############################
+	Nodes:
+		(register, 0x20, 4)
+	
+	Memory Positions:
+	############################
+
+	Path #105
+	############################
+	Nodes:
+		(register, 0x20, 4)
+	
+	Memory Positions:
+	############################
+
+	Path #106
+	############################
+	Nodes:
+		(register, 0x20, 4)
+	
+	Memory Positions:
+	############################
+
+	Path #107
+	############################
+	Nodes:
+		(register, 0x20, 4)
+	
+	Memory Positions:
+	############################
+
+	Path #108
+
+
+RESULT: potentially vulnerable!
+
+#########################################################################
+
+JSON Output Created: httpd_20220819_190545.json
+
+Results Written to JSON.
+
+

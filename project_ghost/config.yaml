@@ -1,0 +1,137 @@
+# ------- Various Output Formats & Options (Will increase compute time) ------- #
+pre_render_graph_svg: false
+pre_render_graph_pdf: true
+pre_render_graph_png: false
+output_decompiled_c_and_disassembly_html: true
+
+# Show each path from the sinks to the end of trace
+output_individual_paths_graph: true
+
+# Show all paths traced for all functions together in a single graph
+output_global_graph: false
+# If the global graph is too big, consider splitting it into each function to decrease compute time.
+split_global_graph_by_funcs: false 
+
+# Especially for Docker whereby the container's root folder is different from 
+# the host's folder; Any href links made will need to be relative.
+output_relative_paths: true 
+
+# ---------------------------- Sink & Source Config ---------------------------- #
+
+# Sink functions to start the sink-to-source tracing from. 
+# Also specify the target parameter to trace, or leave empty to trace all parameters.
+sink_functions:
+  # E.g. strcpy(dest, src)
+  strcpy:   # Function name
+  - 1       # src is index 1 
+  # E.g. strncpy(dest, src, n)
+  strncpy:  # Function name
+  - 1       # src is index 1 
+  # - 2       # n is index 2
+
+# Defines sources, to be flagged if a sink to source path contains the sources defined here.
+source_functions:
+- fgets
+- gets
+- puts
+- getenv
+- fscanf
+- vfscanf
+- vscanf
+- fread
+- fwscanf
+- vfwscanf
+- vwscanf
+- wscanf
+- fgetws
+  
+# Global variables that are sources 
+# E.g. "uri" variable that stores the arbitrary URI string of a server being browsed by a user
+source_global_symbols:
+  - uri
+
+# Set the main() function as a source (i.e. command line inputs to via argv)
+flag_main_as_source: true
+
+# ------------------------- Tracing-related options ------------------------- #
+
+# Ghidra sometimes detects functions as 'UndefinedFunction_xxxxxxxx'. 
+# This can be seen in the GUI, but not via the API. 
+# We can try to automatically detect and define these functions, but there are 
+# many unhandled cases and it is possible for this feature to define functions 
+# incorrectly, thus possibly messing up the tracing.
+auto_define_undefined_functions: false
+# If a function cannot be obtained when tracing, likely due to being an
+# UndefinedFunction, a warning message will be output with the address it was 
+# trying to find the function of. In some binaries, this happens a lot. 
+# If you have no intention of manually checking these UndefinedFunctions, you 
+# may want to suppress the warning message to reduce the clutter of logs.
+supress_cannot_find_parent_function_warning: true
+# In tracing the varnodes, we check whether the corresponding Symbol object is  
+# equal. However, not all varnodes are able to get the Symbol accurately. This 
+# symbol offset check is a less accurate way to trace which may expand the
+# tracing but also give more false-positives
+trace_symbol_offset: false
+# In PCode, the varnode of the function call usually does not give much
+# information. We need to loop backwards to find a better varnode that for 
+# example gives us the buffer size and name. However, it sometimes goes on for
+# a very long time. The max iteration/depth options control how long it will
+# attempt to loop backwards before giving up.
+find_better_arg_max_iterations: 50
+max_funccall_output_trace_depth: 1000
+
+# --------------- Logging Options --------------- #
+
+# Logging levels available (as per Python's logging module):
+# CRITICAL
+# ERROR
+# WARNING
+# INFO
+# DEBUG
+# NOTSET
+console_log_level: INFO
+file_log_level: DEBUG
+
+# --------------- C Lib Function Signatures --------------- #
+
+# These are signatures for function parameters. 
+# This is to aid in tracing thunk functions, whereby the internal function code 
+# is unvailable, so we can only assume that the source of an argument are all of
+# its other arguments.
+# For example, when tracing the 1st argument of strncpy(dest, src, n), the 
+# program can only guess that it comes from the other arguments.
+# This means that 2 traces will be added: dest->src and dest->n. 
+# Remember that the traces are in the sink-to-source direction, 
+# so this is correct. However, when tracing the 2nd argument, it will add the 2 
+# traces as src->dest and src->n, which is incorrect. 
+# The source_sink_parameter_signatures config tells the program which parameters
+# are sources and sinks so that it can create the traces in the right direction. 
+# Do note that you may also omit parameters. 
+# For example, you may leave out the 3rd argument of strncpy in this config, 
+# so it will only trace the dest->src, and not creating the dest->n trace.
+# Also note this only affects the ArgToOtherArgs tracing type. Other types of 
+# tracing will still be done on traced arguments.
+# Note: If the function returns something (i.e. the destination parameter is the return value),
+# write "ret" as part of the destination_parameter_indexes.
+source_sink_parameter_signatures: 
+  strcat: # char *strcat(char *string1, const char *string2);
+    destination_parameter_indexes:
+    - 0
+    source_parameter_indexes:
+    - 1
+  strcpy: # char *strcpy(char *string1, const char *string2);
+    destination_parameter_indexes:
+    - 0
+    source_parameter_indexes:
+    - 1
+  strncpy: # char *strncpy(char *string1, const char *string2, size_t count);
+    destination_parameter_indexes:
+    - 0
+    source_parameter_indexes:
+    - 1
+  strstr: # char *strstr(const char *string1, const char *string2);
+    destination_parameter_indexes:
+    - ret
+    source_parameter_indexes:
+    - 0
+    - 1
